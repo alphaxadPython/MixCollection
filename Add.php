@@ -82,45 +82,6 @@
         <button class="btn  mb-2 update" data-toggle="modal" data-target="#modelId">Add New Product</button> 
     </section>
 
-	<section id="do_action">
-		<div class="container">
-			<div class="heading">
-				<h3>What would you like to do next?</h3>
-				<p>Either Checkout For Payments, Clear the Cart or Proceed Shopping!!</p>
-			</div>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="chose_area">
-						<ul class="user_option">
-							<li>
-								<input type="checkbox">
-								<label>PayPal <i class="fab fa-cc-paypal" style="color: #003a75; font-size: 20px;"></i></label>
-							</li>
-							<li>
-								<input type="checkbox">
-								<label>Master Card <i class="fab fa-cc-mastercard" style="color: #FE980F; font-size: 20px;"></i></label>
-							</li>
-							<li>
-								<input type="checkbox">
-								<label>Western Union</label>
-							</li>
-						</ul>
-						<a class="btn btn-default update" href="">Checkout</a>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="total_area">
-						<ul>
-							<li>Item Quantity <span>80</span></li>
-							<li>Total Cost<span>$61</span></li>
-						</ul>
-							<a class="btn btn-default update" href="">Clear Cart</a>
-							<a class="btn btn-default check_out" href="">Proceed Shopping</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!--/#do_action-->
 
 <!-- Modal -->
 <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">

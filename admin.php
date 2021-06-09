@@ -34,7 +34,7 @@
                             <h1><span>MIX</span>-COLLECTION</h1>
                             <h2>Cheap Products Available !!</h2>
                             <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
+                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Add Products</button>
                         </div>
                         <div class="col-sm-6">
                             <img src="upload/product10.jpg" class="girl img-responsive" alt="" />
@@ -47,7 +47,7 @@
                             <h1><span>MIX</span>-COLLECTION</h1>
                         <h2>Free Products delivery!!</h2>
                         <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
+                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Add Products</button>
                     </div>
                     <div class="col-sm-6">
                             <img src="upload/product11.jpg" class="girl img-responsive" alt="" />
@@ -60,7 +60,7 @@
                             <h1><span>MIX</span>-COLLECTION</h1>
                             <h2>Multiple cartegories!!</h2>
                             <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
+                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Add Products</button>
                         </div>
                         <div class="col-sm-6">
                             <img src="upload/product8.jpg" class="girl img-responsive" alt="" />
@@ -215,7 +215,7 @@
 
                             ?>
                              <div class="col-sm-3">
-                                <a href="details.php?id=<?php echo $row['id']; ?>">
+                                <a href="editProduct.php?id=<?php echo $row['id']; ?>">
                                     <div class="product-image-wrapper card shadow">
                                         <div class="single-products">
                                             <div class="productinfo text-center">

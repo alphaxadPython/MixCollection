@@ -81,11 +81,11 @@
 						<ul class="user_option">
 							<li>
 								<input type="checkbox">
-								<label>PayPal <i class="fas fa-paypal"></i></label>
+								<label>PayPal <i class="fab fa-cc-paypal" style="color: #003a75; font-size: 20px;"></i></label>
 							</li>
 							<li>
 								<input type="checkbox">
-								<label>Master Card</label>
+								<label>Master Card <i class="fab fa-cc-mastercard" style="color: #FE980F; font-size: 20px;"></i></label>
 							</li>
 							<li>
 								<input type="checkbox">
@@ -108,8 +108,6 @@
 			</div>
 		</div>
 	</section><!--/#do_action-->
-
-
 
 
     <script src="js/bootstrap.js"></script>

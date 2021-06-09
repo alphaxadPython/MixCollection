@@ -24,7 +24,7 @@
                 <a class="nav-link" href="checkout.php"> <i class="fa fa-star" aria-hidden="true"></i> Checkouts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=""><i class="fa fa-unlock" aria-hidden="true"></i> Logout</a>
+                <a class="nav-link" href="index.php"><i class="fa fa-unlock" aria-hidden="true"></i> Logout</a>
             </li>
             
         </ul>
