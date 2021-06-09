@@ -242,14 +242,14 @@
 
                             ?>
                              <div class="col-sm-3">
-                                <a href="details.php?id=<?php echo $row['id']; ?>">
+                                <a href=""  data-toggle="modal" data-target="#modelId">
                                     <div class="product-image-wrapper card shadow">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
                                                 <img src="<?php echo $row['photo']; ?>" alt="" />
                                                 <p style="color: #FE980F"><?php echo $row['cost']; ?>TSH/=</p>
                                                 <p><?php echo $row['productname']; ?></p>
-                                                <a href="details.php?id=<?php echo $row['id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href=""  data-toggle="modal" data-target="#modelId" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                             
                                     </div>
@@ -276,14 +276,14 @@
 
                             ?>
                              <div class="col-sm-3">
-                                <a href="details.php?id=<?php echo $row['id']; ?>">
+                                <a href="" data-toggle="modal" data-target="#modelId"> 
                                     <div class="product-image-wrapper card shadow">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
                                                 <img src="<?php echo $row['photo']; ?>" alt="" />
                                                 <p style="color: #FE980F"><?php echo $row['cost']; ?>TSH/=</p>
                                                 <p><?php echo $row['productname']; ?></p>
-                                                <a href="details.php?id=<?php echo $row['id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href=""  data-toggle="modal" data-target="#modelId" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                             
                                     </div>
