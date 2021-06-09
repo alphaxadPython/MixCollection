@@ -22,8 +22,8 @@
 		<div class="container">
 		
             <nav class="breadcrumb">
-                <a class="breadcrumb-item" href="#">Dashboard</a>
-                <a class="breadcrumb-item" href="#">Products</a>
+                <a class="breadcrumb-item" href="admin.php">Home</a>
+                <a class="breadcrumb-item" href="Add.php">Products</a>
                 <span class="breadcrumb-item active">Add Product</span>
             </nav>
 
