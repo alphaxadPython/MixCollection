@@ -94,7 +94,7 @@
 						<ul class="user_option">
 							<li>
 								<input type="checkbox">
-								<label>PayPal <i class="fas fa-paypal"></i></label>
+								<label>PayPal <i class="fab fa-cc-paypal"></i></label>
 							</li>
 							<li>
 								<input type="checkbox">

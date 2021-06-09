@@ -1,4 +1,4 @@
-<?php include "serverProducts.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +17,55 @@
 <body>
     
    <?php include "nav2.php" ?>
-
-   
 	<!-- edit product models -->
+	<?php 
+		$id2 = $_GET['id'];
+
+		include "connection.php"; 
+
+		if(isset($_POST['edit'])) { 
+				
+			$productName = mysqli_real_escape_string($conn, $_POST['productName']);
+			$cost = mysqli_real_escape_string($conn, $_POST['cost']);
+			$quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
+			$cartegory = mysqli_real_escape_string($conn, $_POST['cartegory']);
+
+			
+			$fileName = $_FILES['file']['name'];
+			$fileTmp = $_FILES['file']['tmp_name'];
+			$fileSize = $_FILES['file']['size'];
+			$filesError = $_FILES['file']['error'];
+			$fileType = $_FILES['file']['type'];
+			
+			$fileExt = explode('.',$_FILES['file']['name']);
+			$fileActualExt = strtolower(end($fileExt));
+			$allowed = array('jpg','jpeg','png','webp');
+			if(in_array($fileActualExt,$allowed)){
+				if($_FILES['file']['error'] ===  0){
+					if($_FILES['file']['size'] < 100000000){            
+						
+						$fileDestination = 'upload/'.$fileName;
+						move_uploaded_file($_FILES['file']['tmp_name'],$fileDestination);
+
+						$sql = "UPDATE `products` SET `productname`='$productName',`quantity`='$quantity',`available`='$quantity',`cost`='$cost',`cartegory`='$cartegory',`photo`='$fileDestination' WHERE id ='$id2'";
+						mysqli_query($conn, $sql);
+				
+						header("location: Add.php");
+
+					}else{
+						echo " <script> alert('The image uploaded is too large'); </script> ";
+					}
+				}else{
+					echo " <script> alert('You have an error on uploading the image'); </script> ";
+				}
+			}else{
+				echo " <script> alert('Check The image Field Please!!'); </script> ";
+			}
+
+		}
+
+	?>
+
 	<?php
 		include "connection.php";
 
@@ -36,18 +82,22 @@
 				<div class="card-body">
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-							<img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 300px" alt="">
+							<img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 400px" alt="">
 						</div>
 						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 login-form">
 							<h5 class="text-muted">Edit Product </h5>
 							<form action="" method="POST" enctype="multipart/form-data">
+								<small class="text-muted">Product name</small>
 								<input type="text" name="productName" placeholder="Product Name" value="<?php echo $row['productname']; ?>"/>
+								<small class="text-muted">Product cost</small>
 								<input type="number" name="cost" placeholder="Cost" value="<?php echo $row['cost']; ?>"/>
-								<input type="number" name="quantity" placeholder="Quantity"  value="<?php echo $row['quantity']; ?>"/>
-								
+								<small class="text-muted">available</small>
+								<input type="number" name="quantity" placeholder="Quantity"  value="<?php echo $row['available']; ?>"/>
+								<small class="text-muted">Update Photo</small>
 								<input type="file" name="file" placeholder="Photo" class="form-control" />
-								<select name="cartegory" id="" value="<?php $row['cartegory']; ?>" class="form-control" placeholder="Product cartegory">
-									<option value="" Disabled>Product Cartegory</option>
+								<small class="text-muted">Product cartegory</small>
+								<select name="cartegory" id="" value="" class="form-control" placeholder="Product cartegory">
+									<option value="<?php echo $row['cartegory']; ?>"><?php echo $row['cartegory']; ?></option>
 									<option value="jezi">Jersey</option>
 									<option value="spoti">Sport Facilities</option>
 									<option value="phone">Phone & Tablets</option>
@@ -64,7 +114,7 @@
 									<option value="tight">Body Tights</option>
 									<option value="womenshooo">Women Shoes</option>
 								</select><br>
-								<button type="submit" name="add" class="btn btn-default">Edit Product</button>
+								<button type="submit" name="edit" class="btn btn-default">Edit Product</button>
 							</form>
 						</div>
 					
@@ -75,6 +125,8 @@
 		</div>
 		
 	<?php }?>
+	
+
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
