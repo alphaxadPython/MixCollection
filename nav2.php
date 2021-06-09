@@ -21,7 +21,7 @@
             <li class="nav-item">
                 <a class="nav-link" href=""> <i class="fa fa-cart-plus" aria-hidden="true"></i> Carts</a>
             </li><li class="nav-item">
-                <a class="nav-link" href=""> <i class="fa fa-star" aria-hidden="true"></i> Checkouts</a>
+                <a class="nav-link" href="checkout.php"> <i class="fa fa-star" aria-hidden="true"></i> Checkouts</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href=""><i class="fa fa-unlock" aria-hidden="true"></i> Logout</a>

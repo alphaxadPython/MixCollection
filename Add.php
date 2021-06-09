@@ -1,4 +1,4 @@
-<?php include "serverProducts.php" ?>
+<?php include "serverProducts.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +66,7 @@
 							</td>
 							<td class="cart_delete">
                                  <a class="cart_quantity_delete" href="editProduct.php?id=<?php echo $row['id']; ?>" data-toggle="tooltip" data-placement="top" title="Edit this Item"> <i class="fas fa-edit" ></i></a>
-							    <a class="cart_quantity_delete" href="" data-toggle="tooltip" data-placement="top" title="Delete This Item"><i class="fa fa-trash" aria-hidden="true"></i> </a>
+							    <a class="cart_quantity_delete" href="deleteProduct.php?id=<?php echo $row['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete This Item"><i class="fa fa-trash" aria-hidden="true"></i> </a>
 							</td>
 						</tr>
 
@@ -94,11 +94,11 @@
 						<ul class="user_option">
 							<li>
 								<input type="checkbox">
-								<label>PayPal <i class="fab fa-cc-paypal"></i></label>
+								<label>PayPal <i class="fab fa-cc-paypal" style="color: #003a75; font-size: 20px;"></i></label>
 							</li>
 							<li>
 								<input type="checkbox">
-								<label>Master Card</label>
+								<label>Master Card <i class="fab fa-cc-mastercard" style="color: #FE980F; font-size: 20px;"></i></label>
 							</li>
 							<li>
 								<input type="checkbox">

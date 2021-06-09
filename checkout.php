@@ -16,7 +16,7 @@
 </head>
 <body>
     
-    <?php include "nav1.php" ?>
+    <?php include "nav2.php" ?>
 
     <section class="container">
         <nav class="breadcrumb">
