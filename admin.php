@@ -29,15 +29,17 @@
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="item active">
-                        <div class="col-sm-6">
-                            <h1><span>MIX</span>-COLLECTION</h1>
-                            <h2>Cheap Products Available !!</h2>
-                            <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get">Shop now</button>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                            <img src="images/home/pricing.png"  class="pricing" alt="" />
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h1><span>MIX</span>-COLLECTION</h1>
+                                <h2>Cheap Products Available !!</h2>
+                                <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
+                                <button type="button" class="btn btn-default get">Shop now</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="upload/product10.jpg" class="girl img-responsive" alt="" />
+                                <img src="images/home/pricing.png"  class="pricing" alt="" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,16 +219,18 @@
 
                             ?>
                              <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/gallery1.jpg" alt="" />
-                                            <h2><?php echo $row['cost']; ?>TZ/=</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                        
+                                <a href="details.php?id=<?php echo $row['id']; ?>">
+                                    <div class="product-image-wrapper card shadow">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="<?php echo $row['photo']; ?>" alt="" />
+                                                <p style="color: #FE980F"><?php echo $row['cost']; ?>TSH/=</p>
+                                                <p><?php echo $row['productname']; ?></p>
+                                                <a href="details.php?id=<?php echo $row['id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            </div>
+                                            
                                     </div>
+                                </a>
                                 </div>
                             </div>
                             <?php } ?>
@@ -241,8 +245,6 @@
                         <li><a href="">3</a></li>
                         <li><a href="">&raquo;</a></li>
                     </ul>
-
-
                    
                 </div>
             </div>
