@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Home | Mix Collection</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -206,12 +206,22 @@
                         <h2 class="title text-center">Available Products</h2>
                     
                         <div class="row">
-                            <div class="col-sm-3">
+                           <?php 
+
+                                include "connection.php";
+
+                                $sql = "SELECT * FROM products";
+                                $check = mysqli_query($conn, $sql);
+
+                                while($row = mysqli_fetch_assoc($check)){
+
+                            ?>
+                             <div class="col-sm-3">
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <img src="images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
+                                            <h2><?php echo $row['cost']; ?>TZ/=</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
@@ -219,45 +229,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
 						.
 				    </div><!--features_items-->
@@ -277,52 +249,7 @@
         </div>
     </div>
 
-   
-    
-    <!-- Modal -->
-    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">My Profile</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-5">
-
-                        </div>
-                        <div class="col-md-7">
-                            <b>Username: </b> <span>Alpha Jozee</span> <br>
-
-                            <b>Email: </b> <span>alphajozee8@gmail.com</span> <br>
-                            <hr>
-
-                            <div class="signup-form"><!--sign up form-->
-                            <h2>Change Password!</h2>
-
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <input type="password" placeholder="Old Password"/>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="password" placeholder="New Password"/>
-                                        </div>
-                                    </div>
-                                  <button type="submit" class="btn btn-default">Change</button>
-
-                                </form>
-                            </div><!--/sign up form-->
-                        </div>
-                    </div>
-                </div>
-         
-            </div>
-        </div>
-    </div>
+ 
 
 
     <script src="js/bootstrap.js"></script>
