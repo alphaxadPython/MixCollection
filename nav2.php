@@ -16,7 +16,7 @@
                 <a class="nav-link" href="admin.php" > <i class="fa fa-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=""> <i class="fa fa-star-half" aria-hidden="true"></i> Products</a>
+                <a class="nav-link" href="Add.php"> <i class="fa fa-star-half" aria-hidden="true"></i> Products</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href=""> <i class="fa fa-cart-plus" aria-hidden="true"></i> Carts</a>
