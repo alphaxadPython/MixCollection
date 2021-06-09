@@ -17,7 +17,7 @@
 <body>
     
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Mix Collection</a>
+    <a class="navbar-brand" href="index.php"><span style="color: #FE980F">Mix</span> Collection</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,71 +39,77 @@
              
             </ul>
         </div>
-    </nav> <br>
+    </nav> <br><br><br>
+    <?php include "userServer.php" ?>
+
+
 
    
 	<div class="section">
-        <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselId" data-slide-to="1"></li>
-                <li data-target="#carouselId" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="item active">
-                        <div class="col-sm-6">
-                            <h1><span>MIX</span>-COLLECTION</h1>
-                            <h2>Cheap Products Available !!</h2>
-                            <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get">Shop now</button>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                            <img src="images/home/pricing.png"  class="pricing" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                <div class="item">
+    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselId" data-slide-to="1"></li>
+            <li data-target="#carouselId" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active">
+                <div class="item active">
                     <div class="col-sm-6">
-                            <h1><span>MIX</span>-COLLECTION</h1>
-                        <h2>Free Products delivery!!</h2>
+                        <h1><span>MIX</span>-COLLECTION</h1>
+                        <h2>Cheap Products Available !!</h2>
                         <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                        <button type="button" class="btn btn-default get">Shop now</button>
+                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
                     </div>
                     <div class="col-sm-6">
-                        <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
+                        <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
                         <img src="images/home/pricing.png"  class="pricing" alt="" />
                     </div>
                 </div>
+            </div>
+            <div class="carousel-item">
+            <div class="item">
+                <div class="col-sm-6">
+                        <h1><span>MIX</span>-COLLECTION</h1>
+                    <h2>Free Products delivery!!</h2>
+                    <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
+                    <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
                 </div>
-                <div class="carousel-item">
-                    <div class="item">
-                        <div class="col-sm-6">
-                            <h1><span>MIX</span>-COLLECTION</h1>
-                            <h2>Multiple cartegories!!</h2>
-                            <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get">Shop now</button>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                            <img src="images/home/pricing.png" class="pricing" alt="" />
-                        </div>
+                <div class="col-sm-6">
+                    <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
+                    <img src="images/home/pricing.png"  class="pricing" alt="" />
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item">
+                <div class="item">
+                    <div class="col-sm-6">
+                        <h1><span>MIX</span>-COLLECTION</h1>
+                        <h2>Multiple cartegories!!</h2>
+                        <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
+                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
+                        <img src="images/home/pricing.png" class="pricing" alt="" />
                     </div>
                 </div>
             </div>
-            <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-			</a>
-			<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-			</a>
         </div>
+        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+        </a>
+        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
     </div> <br>
+
+
     
     <div class="section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
@@ -362,20 +368,20 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Login Please</h5>
+					<h5 class="modal-title text-muted">Login Please</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 				</div>
 				<div class="modal-body login-form">
-				<form action="#">
-					<input type="text" placeholder="Name" />
-					<input type="email" placeholder="Email Address" />
-					<span>
-						<input type="checkbox" class="checkbox"> 
-						Keep me signed in
+				<form action="" method="POST">
+					<input type="text" name="username" placeholder="Username" />
+					<input type="password" name="password" placeholder="password" />
+					<span class="text-muted">
+						<input type="checkbox" class="checkbox"> Keep me signed in
+						
 					</span>
-					<button type="submit" class="btn btn-default">Login</button>
+					<button type="submit" name="login" class="btn btn-default">Login</button>
 				</form>
 				</div>
 				
@@ -384,12 +390,13 @@
 	</div>
 
 
-    <!-- Modal -->
+    <!-- Signup modal for the new users -->
     <div class="modal fade" id="modelId1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">New User Signup</h5>
+                    <h5 class="modal-title text-muted">New User Signup</h5>
+                       
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -397,15 +404,22 @@
                 <div class="modal-body">
                 <div class="signup-form"><!--sign up form-->
 						
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<button type="submit" class="btn btn-default">Signup</button>
+						<form action="" method="POST">
+							<input type="text" name="username" placeholder="Username"/>
+							<input type="email" name="email" placeholder="Email Address"/>
+                            <div class="row">
+                                <div class="col-md-6">
+						        	<input type="password" name="password1" placeholder="Password"/>
+                                </div>
+                                <div class="col-md-6">
+						        	<input type="password" name="password2" placeholder="Confirm Password"/>
+                                </div>
+                            </div>
+							<button class="btn btn default" type="submit" name="signup">Signup</button>
 						</form>
 					</div><!--/sign up form-->
                 </div>
-               
+              
             </div>
         </div>
     </div>
