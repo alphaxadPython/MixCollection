@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/pages.css">
 
 
 </head>
@@ -18,8 +19,7 @@
     
     <?php include "nav2.php" ?>
 
-   
-	<div class="section">
+    <div class="section">
         <div id="slider-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselId" data-slide-to="0" class="active"></li>
@@ -27,57 +27,53 @@
                 <li data-target="#carouselId" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
+
                 <div class="carousel-item active">
-                    <div class="item active">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h1><span>MIX</span>-COLLECTION</h1>
-                                <h2>Cheap Products Available !!</h2>
-                                <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                                <button type="button" class="btn btn-default get">Shop now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="upload/product10.jpg" class="girl img-responsive" alt="" />
-                                <img src="images/home/pricing.png"  class="pricing" alt="" />
-                            </div>
+                    <div class="item active row">
+                        <div class="col-sm-6">
+                            <h1><span>MIX</span>-COLLECTION</h1>
+                            <h2>Cheap Products Available !!</h2>
+                            <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
+                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="upload/product10.jpg" class="girl img-responsive" alt="" />
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                <div class="item">
+                <div class="item row">
                     <div class="col-sm-6">
                             <h1><span>MIX</span>-COLLECTION</h1>
                         <h2>Free Products delivery!!</h2>
                         <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                        <button type="button" class="btn btn-default get">Shop now</button>
+                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
                     </div>
                     <div class="col-sm-6">
-                        <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                        <img src="images/home/pricing.png"  class="pricing" alt="" />
+                            <img src="upload/product11.jpg" class="girl img-responsive" alt="" />
                     </div>
                 </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="item">
+                    <div class="item row">
                         <div class="col-sm-6">
                             <h1><span>MIX</span>-COLLECTION</h1>
                             <h2>Multiple cartegories!!</h2>
                             <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get">Shop now</button>
+                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop now</button>
                         </div>
                         <div class="col-sm-6">
-                            <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                            <img src="images/home/pricing.png" class="pricing" alt="" />
+                            <img src="upload/product8.jpg" class="girl img-responsive" alt="" />
                         </div>
                     </div>
                 </div>
             </div>
             <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-			</a>
-			<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-			</a>
+                            <i class="fa fa-angle-left"></i>
+            </a>
+            <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+            </a>
         </div>
     </div> <br>
     
@@ -226,7 +222,7 @@
                                                 <img src="<?php echo $row['photo']; ?>" alt="" />
                                                 <p style="color: #FE980F"><?php echo $row['cost']; ?>TSH/=</p>
                                                 <p><?php echo $row['productname']; ?></p>
-                                                <a href="details.php?id=<?php echo $row['id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="editProduct.php?id=<?php echo $row['id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                             
                                     </div>
@@ -239,13 +235,25 @@
 				    </div><!--features_items-->
                     
 
-                    <ul class="pagination Page navigation">
-                        <li class="active"><a href="">1</a></li>
-                        <li><a href="" class="page-item">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">&raquo;</a></li>
-                    </ul>
-                   
+               
+                    <nav aria-label="pages navigation">
+                      <ul class="pagi justify-content-center">
+                        <li class="pages-item disabled">
+                          <a class="pages-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                        </li>
+                        <li class="pages-item active"><a class="pages-link" href="#">1</a></li>
+                        <li class="pages-item"><a class="pages-link" href="#">2</a></li>
+                        <li class="pages-item">
+                          <a class="pages-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
                 </div>
             </div>
         </div>

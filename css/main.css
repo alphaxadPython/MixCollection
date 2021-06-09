@@ -567,46 +567,44 @@ ul.sub-menu {
 ******* Home ******
 **************************/
 
+/* 
 
-#slider {
+
+
+
+
+
+
+ */
+ #slider {
   padding-bottom: 45px;
 }
-
-.carousel-indicators li {
-  background: #C4C4BE;
+ .carousel-indicators li.active {
+  background: #FE980F;
 }
-
-.carousel-indicators li.active {
-	  background: #FE980F;
-}
-
-.item {
+ .item {
   padding-left: 100px;
 }
-
-
-.pricing {
+ .pricing {
   position: absolute;
   right: 40%;
   top: 52%;
 }
-
-.girl {
+ .girl {
   margin-left: 0;
 }
-
-.item h1 {
+ .item h1 {
   color: #B4B1AB;
   font-family: abel;
   font-size: 48px;
-  margin-top: 115px;
+  margin-top: 30px;
 }
 
-.item h1 span {
+ .item h1 span {
 	color:#FE980F;
 }
 
-.item h2 {
+ .item h2 {
   color: #363432;
   font-family: 'Roboto', sans-serif;
   font-size: 28px;
@@ -614,14 +612,15 @@ ul.sub-menu {
   margin-bottom: 22px;
   margin-top: 10px;
 }
-
-.item  p {
+ .item  p {
 	color:#363432;
 	font-size:16px;
 	font-weight:300;
 	font-family: 'Roboto', sans-serif;
 }
-
+.carousel-indicators li {
+  background: #C4C4BE;
+}
 .get {
   background: #FE980F;
   border: 0 none;
@@ -1136,7 +1135,7 @@ h2.title {
 .pagination  li  a:hover{
 	background:#FE980F;
 	color:#fff;
-}
+} 
 
 
 

@@ -45,7 +45,7 @@
 
 
    
-	<div class="section">
+    <div class="section">
     <div id="slider-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselId" data-slide-to="0" class="active"></li>
