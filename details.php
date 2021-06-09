@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product-Details | Mix Collection</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -149,12 +149,25 @@
                 </div>
 
                 <div class="col-sm-9 padding-right">
+
+                <?php
+                    include "connection.php";
+
+                    $id = $_GET['id'];
+
+                    $sql = "SELECT * FROM products where id ='$id'";
+                    $check = mysqli_query($conn, $sql);
+
+                    while($row = mysqli_fetch_assoc($check)){
+                 ?>
+
+
 					<div class="product-details row"><!--product-details-->
                     
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="images/product-details/1.jpg" alt="" />
-								<h3>ZOOM</h3>
+								<img src="<?php echo $row['photo']; ?>" alt="" />
+								
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
@@ -191,11 +204,10 @@
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-								<p>Web ID: 1089772</p>
+								<h2><?php echo $row['productname']; ?></h2>
 								<img src="images/product-details/rating.png" alt="" />
 								<span>
-									<span>US $59</span>
+									<span><?php echo $row['cost']; ?>TSH/=</span>
 									<label>Quantity:</label>
 									<input type="text" value="3" />
 									<button type="button" class="btn btn-fefault cart">
@@ -205,11 +217,13 @@
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> E-SHOPPER</p>
+								<p><b>Brand:</b> MIX-COLLECTION</p>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
+
+                    <?php } ?>
 				
 				</div>
             </div>

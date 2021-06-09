@@ -92,7 +92,7 @@
 								<label>Western Union</label>
 							</li>
 						</ul>
-						<a class="btn btn-default update" href="">Checkout</a>
+						<a class="btn btn-default update" href="checkout.php">Checkout</a>
 					</div>
 				</div>
 				<div class="col-sm-6">
@@ -102,7 +102,7 @@
 							<li>Total Cost<span>$61</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Clear Cart</a>
-							<a class="btn btn-default check_out" href="">Proceed Shopping</a>
+							<a class="btn btn-default check_out" href="loged.php">Proceed Shopping</a>
 					</div>
 				</div>
 			</div>
