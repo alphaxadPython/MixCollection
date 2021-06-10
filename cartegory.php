@@ -17,21 +17,7 @@
 <body>
 
     <?php include "b4nav.php"; ?>
-    
-    <?php 
-
-            include "connection.php";
-
-            $cartegory = $_GET['cartegory'];
-
-            $sql = "SELECT * FROM products WHERE cartegory ='$cartegory'";
-            $check = mysqli_query($conn, $sql);
-
-            while($row = mysqli_fetch_assoc($check)){
-
-    ?>
-
-
+   
         <div class="section">
             <div id="slider-carousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -99,15 +85,29 @@
 
                     <div class="col-sm-9">
                         <div class="features_items"><!--features_items-->
-                            <h2 class="title text-center">Available <?php echo $cartegory; ?></h2>
+                            <h2 class="title text-center">Available <?php $cartegory = $_GET['cartegory']; echo $cartegory; ?></h2>
                         
                             <div class="row">
+
+                                 
+                                <?php 
+
+                                    include "connection.php";
+
+                                    $cartegory = $_GET['cartegory'];
+
+                                    $sql = "SELECT * FROM products WHERE cartegory ='$cartegory'";
+                                    $check = mysqli_query($conn, $sql);
+
+                                    while($row = mysqli_fetch_assoc($check)){
+
+                                ?>
                                 <div class="col-sm-3">
                                     <a href=""  data-toggle="modal" data-target="#modelId">
                                         <div class="product-image-wrapper card shadow">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="<?php echo $row['photo']; ?>" alt="" />
+                                                    <img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 160px" alt="" />
                                                     <p style="color: #FE980F"><?php echo $row['cost']; ?>TSH/=</p>
                                                     <p><?php echo $row['productname']; ?></p>
                                                     <a href=""  data-toggle="modal" data-target="#modelId" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -117,6 +117,7 @@
                                     </a>
                                     </div>
                                 </div>
+                                <?php } ?>
                             </div>
                             .
                         </div><!--features_items-->
@@ -192,7 +193,7 @@
             </div>
         </div>
 
-    <?php } ?>
+
 
 
     <?php include "loginSign.php" ?>
