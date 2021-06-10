@@ -11,36 +11,13 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/pages.css">
 
 
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="index.php"><span style="color: #FE980F">Mix</span> Collection</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-           
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search...">
-                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </form>
-                <li class="nav-item active">
-                    <a class="nav-link" href="" data-toggle="modal" data-target="#modelId">Login <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="" data-toggle="modal" data-target="#modelId1">Signup</a>
-                </li>
-             
-            </ul>
-        </div>
-    </nav> <br><br><br>
-    <?php include "userServer.php" ?>
+    <?php include "b4nav.php"; ?>
 
 
 
@@ -107,124 +84,7 @@
     <div class="section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="left-sidebar">
-                        <h2>Categories</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                            <b>Sportings</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="sportswear" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Jersey </a></li>
-                                            <li><a href="#">Balls </a></li>
-                                            <li><a href="#">Sport shoes </a></li>
-                                            <li><a href="#">Sport Facilities</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#electronics">
-                                            <b>Electronics</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="electronics" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Phones & Tablets </a></li>
-                                            <li><a href="#">Laptops & Tablets </a></li>
-                                            <li><a href="#">TV's & Accessories </a></li>
-                                            <li><a href="#">Music Instruments</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                            <b>Mens Clothing</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="mens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Shirts & T-shirts</a></li>
-                                            <li><a href="#">Trouser & Shorts</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                            <b>Women Clothing</b>
-                                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="womens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Skirts & Gouwns</a></li>
-                                            <li><a href="#">Jeans & trouser</a></li>
-                                            <li><a href="#">Body Tights</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Bags & Watches</b></a></h4>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Home Appliance</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Healthy & Beauty</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Stationaries</b></a></h4>
-                                </div>
-                            </div>
-                        </div><!--/category-products-->
-                    </div>
-                </div>
+              <?php include "sideMenue.php" ?>
 
                 <div class="col-sm-9">
                     <div class="features_items"><!--features_items-->
@@ -296,79 +156,32 @@
 				    </div><!--features_items-->
 
 
+                    <nav aria-label="pages navigation">
+                      <ul class="pagi justify-content-center">
+                        <li class="pages-item disabled">
+                          <a class="pages-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                        </li>
+                        <li class="pages-item active"><a class="pages-link" href="index.php">1</a></li>
+                        <li class="pages-item"><a class="pages-link" href="#">2</a></li>
+                        <li class="pages-item">
+                          <a class="pages-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
                     
 					
                 </div>
             </div>
         </div>
     </div>
-
-
-
- 
     
-    <!-- Modal fo login form -->
-    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title text-muted">Login Please</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-				</div>
-				<div class="modal-body login-form">
-				<form action="" method="POST">
-					<input type="text" name="username" placeholder="Username" />
-					<input type="password" name="password" placeholder="password" />
-					<span class="text-muted">
-						<input type="checkbox" class="checkbox"> Keep me signed in
-						
-					</span>
-					<button type="submit" name="login" class="btn btn-default">Login</button>
-				</form>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-
-
-    <!-- Signup modal for the new users -->
-    <div class="modal fade" id="modelId1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-muted">New User Signup</h5>
-                       
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                </div>
-                <div class="modal-body">
-                <div class="signup-form"><!--sign up form-->
-						
-						<form action="" method="POST">
-							<input type="text" name="username" placeholder="Username"/>
-							<input type="email" name="email" placeholder="Email Address"/>
-                            <div class="row">
-                                <div class="col-md-6">
-						        	<input type="password" name="password1" placeholder="Password"/>
-                                </div>
-                                <div class="col-md-6">
-						        	<input type="password" name="password2" placeholder="Confirm Password"/>
-                                </div>
-                            </div>
-							<button class="btn btn default" type="submit" name="signup">Signup</button>
-						</form>
-					</div><!--/sign up form-->
-                </div>
-              
-            </div>
-        </div>
-    </div>
-
-
+    <?php include "loginSign.php" ?>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -20,7 +20,7 @@
             $sql = "INSERT INTO `users`(`username`, `email`, `password`) VALUES ('$username','$email','$password1')";
             mysqli_query($conn, $sql);
  
-            header('location: cartegory.php');
+            header('location: userloged.php');
 
            }else{
                 
@@ -64,7 +64,7 @@
         $check = mysqli_query($conn, $sql);
 
         if(mysqli_num_rows($check) == 1){
-            header("location: cartegory.php");
+            header("location: userloged.php");
         }
         
     }
