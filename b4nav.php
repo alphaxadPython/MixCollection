@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-sm navbar-light bg-light position-sticky fixed-top">
          <a class="navbar-brand" href="index.php"><span style="color: #FE980F">Mix</span> Collection</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
