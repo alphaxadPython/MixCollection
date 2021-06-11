@@ -16,7 +16,7 @@
 </head>
 <body>
     
-    <?php include "b4nav.php"; ?>
+    <?php include "nav1.php"; ?>
 
     <div class="section">
         <div id="slider-carousel" class="carousel slide" data-ride="carousel">
@@ -87,7 +87,7 @@
     <div class="section">
         <div class="container">
             <div class="row">
-              <?php include "sideMenue.php" ?>
+              <?php include "logedSide.php" ?>
 
                 <div class="col-sm-9">
 
@@ -112,6 +112,7 @@
                                 $check = mysqli_query($conn, $sql);
 
                                 while($row = mysqli_fetch_assoc($check)){
+
 
                             ?>
                              <div class="col-6 col-md-3">

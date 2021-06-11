@@ -18,8 +18,6 @@
     
     <?php include "b4nav.php"; ?>
 
-
-
     <div class="section">
         <div id="slider-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -86,7 +84,7 @@
 
     
     <div class="section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
               <?php include "sideMenue.php" ?>
 

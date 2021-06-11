@@ -25,15 +25,15 @@
                 <li data-target="#carouselId" data-slide-to="1"></li>
                 <li data-target="#carouselId" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner pl-3" role="listbox">
 
-                <div class="carousel-item active">
+                <div class="carousel-item active ">
                     <div class="item active row">
                         <div class="col-sm-6">
                             <h1><span>MIX</span>-COLLECTION</h1>
                             <h2>Cheap Products Available !!</h2>
                             <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Add Products</button>
+                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop Now</button>
                         </div>
                         <div class="col-sm-6">
                             <img src="upload/product10.jpg" class="girl img-responsive" alt="" />
@@ -46,7 +46,7 @@
                             <h1><span>MIX</span>-COLLECTION</h1>
                         <h2>Free Products delivery!!</h2>
                         <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Add Products</button>
+                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop Now</button>
                     </div>
                     <div class="col-sm-6">
                             <img src="upload/product11.jpg" class="girl img-responsive" alt="" />
@@ -59,7 +59,7 @@
                             <h1><span>MIX</span>-COLLECTION</h1>
                             <h2>Multiple cartegories!!</h2>
                             <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Add Products</button>
+                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop Now</button>
                         </div>
                         <div class="col-sm-6">
                             <img src="upload/product8.jpg" class="girl img-responsive" alt="" />
@@ -79,124 +79,7 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="left-sidebar">
-                        <h2>Categories</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                            <b>Sportings</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="sportswear" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Jersey </a></li>
-                                            <li><a href="#">Balls </a></li>
-                                            <li><a href="#">Sport shoes </a></li>
-                                            <li><a href="#">Sport Facilities</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#electronics">
-                                            <b>Electronics</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="electronics" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Phones & Tablets </a></li>
-                                            <li><a href="#">Laptops & Tablets </a></li>
-                                            <li><a href="#">TV's & Accessories </a></li>
-                                            <li><a href="#">Music Instruments</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                            <b>Mens Clothing</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="mens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Shirts & T-shirts</a></li>
-                                            <li><a href="#">Trouser & Shorts</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                            <b>Women Clothing</b>
-                                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="womens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Skirts & Gouwns</a></li>
-                                            <li><a href="#">Jeans & trouser</a></li>
-                                            <li><a href="#">Body Tights</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Bags & Watches</b></a></h4>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Home Appliance</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Healthy & Beauty</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Stationaries</b></a></h4>
-                                </div>
-                            </div>
-                        </div><!--/category-products-->
-                    </div>
-                </div>
+                <?php include "logedSide.php" ?>
 
                 <div class="col-sm-9">
                 <div class="features_items"><!--features_items-->
