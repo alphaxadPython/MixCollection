@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2021 at 01:11 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.1.12
+-- Generation Time: Jun 11, 2021 at 07:22 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -77,11 +76,6 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `productname`, `quantity`, `available`, `cost`, `cartegory`, `photo`) VALUES
-(1, 'Jeans Girl', 20, 20, 20000, 'skirt', 'upload/unnamed.png'),
-(2, 'Jeans Smart', 30, 30, 25000, 'skirt', 'upload/130-1301743_jeans-pants-blue-denim-cute-aesthetic-outfit-cute.png'),
-(3, 'Jeans Blak', 20, 20, 1800, 'skirt', 'upload/900-9005540_mid-rise-skinny-jeans-black-jeans-women-png.jpg'),
-(4, 'Jeans mark', 30, 30, 14000, 'skirt', 'upload/515-5157864_women-jeans-png-hd-background-portable-network-graphics.png'),
-(5, 'Jeans Cuts', 40, 40, 30000, 'skirt', 'upload/f8ba5cc81747d4d6d22a00d7054e3627.jpg'),
 (6, 'Black njumu', 40, 40, 15000, 'menshoo', 'upload/8-black-men-shoes-png-image.png'),
 (7, 'Simple rubber', 50, 50, 30000, 'menshoo', 'upload/357-3577966_shoes-for-men-png-transparent-png.png'),
 (8, 'Rubber Alena', 15, 15, 5000, 'menshoo', 'upload/809-8091487_men-shoes-clipart-picart-nike-sports-shoes-png.jpg'),
@@ -119,7 +113,38 @@ INSERT INTO `products` (`id`, `productname`, `quantity`, `available`, `cost`, `c
 (40, 'Smart Monitor', 30, 30, 250000, 'laptop', 'upload/monitor.png'),
 (41, 'Guchi watch', 30, 30, 5000, 'bag', 'upload/hand.png'),
 (42, 'Trouser Jeans', 80, 80, 18000, 'short', 'upload/pack.jpg'),
-(43, 'Golden watch', 67, 67, 7000, 'bag', 'upload/handz.jpg');
+(43, 'Golden watch', 67, 67, 7000, 'bag', 'upload/handz.jpg'),
+(44, 'Grid Books', 19, 19, 2000, 'station', 'upload/station1.jpg'),
+(45, 'Carets covers', 40, 40, 2000, 'station', 'upload/caret.png'),
+(46, 'shapener', 10, 10, 200, 'station', 'upload/shap.jpg'),
+(47, 'Pencils', 20, 20, 100, 'station', 'upload/pencil.png'),
+(48, 'Color Ui', 10, 10, 300, 'station', 'upload/color.png'),
+(49, 'Counter pack', 10, 10, 4000, 'station', 'upload/pack.png'),
+(50, 'Mikasi', 30, 30, 400, 'station', 'upload/scisor.png'),
+(51, 'Note pad', 50, 50, 3000, 'station', 'upload/note.png'),
+(52, 'Curry Watch', 30, 30, 4000, 'bag', 'upload/watch.png'),
+(53, 'Stock watch', 45, 45, 3000, 'bag', 'upload/stock.jpg'),
+(54, 'Pety Watch', 12, 12, 4000, 'bag', 'upload/pety.webp'),
+(55, 'Grant Watch', 20, 20, 4000, 'bag', 'upload/grant.png'),
+(56, 'Smart Watch', 12, 12, 5000, 'bag', 'upload/smart.png'),
+(57, 'Dort Mond B', 40, 40, 15000, 'jezi', 'upload/dot.jpg'),
+(58, 'Brazil 2012', 30, 30, 16000, 'jezi', 'upload/braa.png'),
+(59, 'Etihad Black', 10, 10, 18000, 'jezi', 'upload/eti.png'),
+(60, 'backet vest', 4000, 4000, 12000, 'jezi', 'upload/vest.jpg'),
+(61, 'Bacelona 2013', 30, 30, 14000, 'jezi', 'upload/brazil.jpg'),
+(62, 'Qatar Baca', 50, 50, 13000, 'jezi', 'upload/qatar.jpg'),
+(63, 'Brazil 2019', 12, 12, 4000, 'jezi', 'upload/brazzo.png'),
+(64, 'Aresenal 2018', 11, 11, 15000, 'jezi', 'upload/asen.png'),
+(65, 'Beach wagon', 12, 12, 3000, 'short', 'upload/12_copy_800x.webp'),
+(66, 'Pullo Blue', 23, 23, 2000, 'short', 'upload/pullo.jpg'),
+(67, 'Beach marina', 12, 12, 4000, 'short', 'upload/beach.png'),
+(68, 'Bob Pens', 12, 12, 2500, 'short', 'upload/bob.png'),
+(69, 'Red ganlin', 16, 16, 2400, 'short', 'upload/red.jpg'),
+(70, 'White bahari', 14, 14, 3000, 'short', 'upload/bahari.jpg'),
+(71, 'Grey Panama', 45, 45, 5000, 'short', 'upload/indexfdgfd.jpg'),
+(72, 'jeans comba', 35, 35, 3400, 'short', 'upload/jean.jpg'),
+(73, 'Hot pots', 45, 45, 15000, 'app', 'upload/pot.jpg'),
+(74, 'Fly pana', 12, 12, 3000, 'app', 'upload/fly.jpg');
 
 -- --------------------------------------------------------
 
@@ -189,7 +214,7 @@ ALTER TABLE `checkout`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `users`
