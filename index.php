@@ -78,13 +78,10 @@
         </div>
     </div> <br>
 
-
     <div class="d-sm-block d-md-none fixed-top position-sticky">
         <nav class="breadcrumb">
-            <a class="breadcrumb-item nav-item dropdown" href="#menu" data-toggle="dropdown"> Cartegories</a>
-            
+            <a  href="#menu" style="color: #FE980F;"><i class="fas fa-caret-down"></i> Cartegories</a>  
         </nav>
-       
     </div>
 
     
@@ -96,13 +93,12 @@
                 <div class="col-sm-9">
 
                     <div class="features_items"><!--features_items-->
-                        <h2 class="title text-center">Most Shopped</h2>
+                        <h2 class="title text-center">Available Products</h2>
                     
                         <div class="row">
                            <?php 
 
                                 include "connection.php";
-
                                 $sql = "SELECT * FROM products";
                                 $check = mysqli_query($conn, $sql);
 
@@ -154,6 +150,7 @@
         </div>
     </div>
 
+    <?php include "loginSign.php" ?>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -79,10 +79,8 @@
 
     <div class="d-sm-block d-md-none fixed-top position-sticky">
         <nav class="breadcrumb">
-            <a class="breadcrumb-item nav-item dropdown" href="#menu" data-toggle="dropdown"> Cartegories</a>
-            
+            <a  href="#menu" style="color: #FE980F;"><i class="fas fa-caret-down"></i> Cartegories</a>  
         </nav>
-       
     </div>
 
     
@@ -93,18 +91,24 @@
 
                 <div class="col-sm-9">
 
-                
-
-
                     <div class="features_items"><!--features_items-->
-                        <h2 class="title text-center">Most Shopped</h2>
+                         <?php 
+
+                            include "connection.php";
+                            $cartegory = $_GET['cartegory'];
+                            $sql = "SELECT cartegory FROM products WHERE cartegory ='$cartegory'";
+                            $check = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_assoc($check)
+                        ?>
+                        <h2 class="title text-center">Available <?php echo $row['cartegory']; ?></h2>
+                        <?php  ?>
                     
                         <div class="row">
                            <?php 
 
                                 include "connection.php";
-
-                                $sql = "SELECT * FROM products";
+                                $cartegory = $_GET['cartegory'];
+                                $sql = "SELECT * FROM products WHERE cartegory ='$cartegory'";
                                 $check = mysqli_query($conn, $sql);
 
                                 while($row = mysqli_fetch_assoc($check)){
@@ -149,12 +153,12 @@
                       </ul>
                     </nav>
                     
-					
                 </div>
             </div>
         </div>
     </div>
 
+    <?php include "loginSign.php" ?>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
