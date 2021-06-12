@@ -116,7 +116,7 @@
 
                             ?>
                              <div class="col-6 col-md-3">
-                                <a href=""  data-toggle="modal" data-target="#modelId">
+                                <a href="details.php?id=<?php echo $row['id']; ?>">
                                     <div class="product-image-wrapper card shadow">
                                         <div class="single-products">
                                             <div class="productinfo text-center">

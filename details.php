@@ -20,133 +20,15 @@
 
     <div class="container">
         <nav class="breadcrumb">
-            <a class="breadcrumb-item" href="#">Home</a>
-            <a class="breadcrumb-item" href="#">Cartegory</a>
-            <span class="breadcrumb-item active">ProductCartegory</span>
+          
+            <span class="breadcrumb-item active">Product name</span>
         </nav>
     </div>
    
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="left-sidebar">
-                        <h2>Categories</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                            <b>Sportings</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="sportswear" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Jersey </a></li>
-                                            <li><a href="#">Balls </a></li>
-                                            <li><a href="#">Sport shoes </a></li>
-                                            <li><a href="#">Sport Facilities</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#electronics">
-                                            <b>Electronics</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="electronics" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Phones & Tablets </a></li>
-                                            <li><a href="#">Laptops & Tablets </a></li>
-                                            <li><a href="#">TV's & Accessories </a></li>
-                                            <li><a href="#">Music Instruments</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                            <b>Mens Clothing</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="mens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Shirts & T-shirts</a></li>
-                                            <li><a href="#">Trouser & Shorts</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                            <b>Women Clothing</b>
-                                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="womens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Skirts & Gouwns</a></li>
-                                            <li><a href="#">Jeans & trouser</a></li>
-                                            <li><a href="#">Body Tights</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Bags & Watches</b></a></h4>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Home Appliance</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Healthy & Beauty</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Stationaries</b></a></h4>
-                                </div>
-                            </div>
-                        </div><!--/category-products-->
-                    </div>
-                </div>
+                <?php include "logedSide.php"; ?>
 
                 <div class="col-sm-9 padding-right">
 
@@ -160,68 +42,44 @@
 
                     while($row = mysqli_fetch_assoc($check)){
                  ?>
-
-
-					<div class="product-details row"><!--product-details-->
-                    
-						<div class="col-sm-5">
-							<div class="view-product">
-								<img src="<?php echo $row['photo']; ?>" alt="" />
-								
+				
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 400px" alt="">
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 login-form">
+									<h5 class="text-muted"><?php echo $row['productname']; ?> </h5>
+									<form action="" method="POST" enctype="multipart/form-data">
+										<small class="text-muted">Product name</small>
+										<input type="text" name="productName" placeholder="Product Name" value="<?php echo $row['productname']; ?>" disabled/>
+										<small class="text-muted">Product cost</small>
+										<input type="text" name="cost" placeholder="Cost" value="<?php echo $row['cost']; ?>" disabled/>
+										<small class="text-muted">available</small>
+										<input type="text" name="quantity" placeholder="Quantity"  value="<?php echo $row['available']; ?>" disabled/>
+										<small class="text-muted">Update Photo</small>
+										<small class="text-muted">Choose Quantity</small>
+										<input type="checkbox" name=""  class="text-warning bg-warning" id="">
+										<select name="quantity" id="" value="" class="form-control" placeholder="Product quantity">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+										</select><br>
+										<button type="submit" name="edit" class="btn btn-default">Edit Product</button>
+									</form>
+								</div>
+							
 							</div>
-							<div id="similar-product" class="carousel slide" data-ride="carousel">
-								
-								  <!-- Wrapper for slides -->
-								    <div class="carousel-inner">
-										<div class="item active">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-										
-									</div>
-
-								  <!-- Controls -->
-								  <a class="left item-control" href="#similar-product" data-slide="prev">
-									<i class="fa fa-angle-left"></i>
-								  </a>
-								  <a class="right item-control" href="#similar-product" data-slide="next">
-									<i class="fa fa-angle-right"></i>
-								  </a>
-							</div>
-
 						</div>
-						<div class="col-sm-7">
-							<div class="product-information"><!--/product-information-->
-								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2><?php echo $row['productname']; ?></h2>
-								<img src="images/product-details/rating.png" alt="" />
-								<span>
-									<span><?php echo $row['cost']; ?>TSH/=</span>
-									<label>Quantity:</label>
-									<input type="text" value="3" />
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>
-										Add to cart
-									</button>
-								</span>
-								<p><b>Availability:</b> In Stock</p>
-								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> MIX-COLLECTION</p>
-								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
-							</div><!--/product-information-->
-						</div>
-					</div><!--/product-details-->
+					</div>
 
                     <?php } ?>
 				

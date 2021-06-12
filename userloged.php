@@ -96,14 +96,14 @@
 
                             ?>
                              <div class="col-6 col-md-3">
-                                <a href=""  data-toggle="modal" data-target="#modelId">
+                                <a href="details.php?id=<?php echo $row['id']; ?>" >
                                     <div class="product-image-wrapper card shadow">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
                                                 <img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 160px" alt="" />
                                                 <p style="color: #FE980F"><?php echo $row['cost']; ?>TSH/=</p>
                                                 <p><?php echo $row['productname']; ?></p>
-                                                <a href=""  data-toggle="modal" data-target="#modelId" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="details.php?id=<?php echo $row['id']; ?>"  class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                             
                                     </div>

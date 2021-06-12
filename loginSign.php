@@ -11,8 +11,8 @@
 				</div>
 				<div class="modal-body login-form">
 				<form action="" method="POST">
-					<input type="text" name="username" placeholder="Username" />
-					<input type="password" name="password" placeholder="password" />
+					<input type="text" name="username" placeholder="Username" required />
+					<input type="password" name="password" placeholder="password" required/>
 					<span class="text-muted">
 						<input type="checkbox" class="checkbox"> Keep me signed in
 						
@@ -41,14 +41,14 @@
                 <div class="signup-form"><!--sign up form-->
 						
 						<form action="" method="POST">
-							<input type="text" name="username" placeholder="Username"/>
-							<input type="email" name="email" placeholder="Email Address"/>
+							<input type="text" name="username" placeholder="Username" required/>
+							<input type="email" name="email" placeholder="Email Address" required/>
                             <div class="row">
                                 <div class="col-md-6">
-						        	<input type="password" name="password1" placeholder="Password"/>
+						        	<input type="password" name="password1" placeholder="Password" required/>
                                 </div>
                                 <div class="col-md-6">
-						        	<input type="password" name="password2" placeholder="Confirm Password"/>
+						        	<input type="password" name="password2" placeholder="Confirm Password" required/>
                                 </div>
                             </div>
 							<button class="btn btn default" type="submit" name="signup">Signup</button>
