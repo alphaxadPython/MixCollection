@@ -18,19 +18,19 @@
     
     <?php include "nav1.php" ?>
 
-    <div class="container">
+    <div class="d-sm-block d-md-none fixed-top position-sticky">
         <nav class="breadcrumb">
-          
-            <span class="breadcrumb-item active">Product name</span>
+            <a  href="#menu" style="color: #FE980F;"><i class="fas fa-caret-down"></i> Cartegories</a>   
         </nav>
     </div>
    
-    <div class="section">
+   
+    <div class="section mt-5">
         <div class="container">
             <div class="row">
                 <?php include "logedSide.php"; ?>
 
-                <div class="col-sm-9 padding-right">
+                <div class="col-sm-9">
 
                 <?php
                     include "connection.php";
@@ -43,43 +43,53 @@
                     while($row = mysqli_fetch_assoc($check)){
                  ?>
 				
-					<div class="card">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 400px" alt="">
-								</div>
-								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 login-form">
-									<h5 class="text-muted"><?php echo $row['productname']; ?> </h5>
-									<form action="" method="POST" enctype="multipart/form-data">
-										<small class="text-muted">Product name</small>
-										<input type="text" name="productName" placeholder="Product Name" value="<?php echo $row['productname']; ?>" disabled/>
-										<small class="text-muted">Product cost</small>
-										<input type="text" name="cost" placeholder="Cost" value="<?php echo $row['cost']; ?>" disabled/>
-										<small class="text-muted">available</small>
-										<input type="text" name="quantity" placeholder="Quantity"  value="<?php echo $row['available']; ?>" disabled/>
-										<small class="text-muted">Update Photo</small>
-										<small class="text-muted">Choose Quantity</small>
-										<input type="checkbox" name=""  class="text-warning bg-warning" id="">
-										<select name="quantity" id="" value="" class="form-control" placeholder="Product quantity">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-										</select><br>
-										<button type="submit" name="edit" class="btn btn-default">Edit Product</button>
-									</form>
-								</div>
-							
-							</div>
-						</div>
-					</div>
+                     <div class="row">
+                     <div class="col-md-6">
+                        <img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 400px" alt="">
+                    </div>
+                    <div class="col-md-6  login-form">
+                        <h5 class="text-muted"><?php echo $row['productname']; ?> </h5>
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <small class="text-muted">Product name</small>
+                            <input type="text" name="productName" placeholder="Product Name" value="<?php echo $row['productname']; ?>" disabled/>
+                            <small class="text-muted">Product cost</small>
+                            <input type="text" name="cost" placeholder="Cost" value="<?php echo $row['cost']; ?>" disabled/>
+                            <small class="text-muted">available</small>
+                            <input type="text" name="quantity" placeholder="Quantity"  value="<?php echo $row['available']; ?>" disabled/>
+                            <div class="row">
+                                <div class="col-6">
+                                    <small class="text-muted">User ratings</small><br>
+                                    <i class="fas fa-star text-warning mt-4" ></i><i class="fas fa-star text-warning"></i>  <i class="fas fa-star-half-alt text-warning"></i><i class="fas fa-star-half-alt text-warning"></i><br>
+                                </div>
+                                <div class="col-6">
+                                <small class="text-muted">Choose Quantity</small>
+                                    <select name="quantity" id="" value="" class="form-control" placeholder="Product quantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select><br>
+                                </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    
+                                    <button type="submit" name="edit" class="btn btn-default"><i class="fas fa-hand-holding-usd"></i> Buy Now</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="submit" name="edit" class="btn btn-default"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                     </div>
+ 
 
                     <?php } ?>
 				
