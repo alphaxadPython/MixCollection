@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="userloged.php"><span style="color: #FE980F">Mix</span> Collection</a>
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="userloged.php"><img src="logo/logo.jpg" style="width: 30px; height: 30px; border-radius: 50%" alt=""> <span style="color: #FE980F">Mix</span> Collection</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,17 +19,17 @@
                     <a class="nav-link" href="" data-toggle="modal" data-target="#modelId"> <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=""> <i class="fa fa-cart-plus" aria-hidden="true"></i> Cart</a>
+                    <a class="nav-link" href="cart.php"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-warning text-white">8</span></a>
                 </li><li class="nav-item">
-                    <a class="nav-link" href=""> <i class="fa fa-star" aria-hidden="true"></i> Checkout</a>
+                    <a class="nav-link" href="checkout.php"> <i class="fa fa-star" aria-hidden="true"></i> Checkout</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=""><i class="fa fa-unlock" aria-hidden="true"></i> Logout</a>
+                    <a class="nav-link" href="index.php"><i class="fa fa-unlock" aria-hidden="true"></i> Logout</a>
                 </li>
              
             </ul>
         </div>
-    </nav>
+    </nav> <br><br>
 
 
     
@@ -45,28 +45,42 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
+                        <?php 
+                            include "connection.php";
+                            session_start();
+
+                            $id = $_SESSION['id'];
+
+                            $sql = "SELECT * FROM users WHERE id ='$id'";
+                            $check = mysqli_query($conn, $sql);
+    
+                            while($row = mysqli_fetch_assoc($check)){
+                        ?>
+
+
                         <div class="col-md-6">
-                            <img src="upload/bob.png" style="width: 100%; height: 250px" alt="">
+                            <img src="upload/walk.jpg" style="width: 100%; height: 300px" alt="">
                         </div>
                         <div class="col-md-6">
-                            <h6 class=" text-warning">Username: </h6><span class="text-muted">Alpha Jozee</span>
-                            <h6 class=" text-warning">Email: </h6><span class="text-muted">alphajozee@gmail.com</span>
-                            <h6 class="mt-2 text-warning">Change Password: </h6>
+                            <h6 class=" text-warning"><i class="fa fa-user" aria-hidden="true"></i> Username: </h6><span class="text-muted"><?php echo $row['username']; ?></span>
+                            <h6 class=" text-warning">Email: </h6><span class="text-muted"><?php echo $row['email']; ?></span>
+                            <h6 class="mt-2 text-warning"><i class="fa fa-unlock" aria-hidden="true"></i> Change Password: </h6>
                             <div class="mt-2 row p-3 login-form">
                                <form action="" method="post">
                                    <div class="row ">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                             <input type="password" name="password1" placeholder="Old Password" required/>
                                         </div>
-                                        <div class="col-md-6 ">
+                                        <div class="col-md-12 ">
                                             <input type="password" name="password1" placeholder="New password" required/>
                                         </div>
                                    </div>
-                                   <button class="btn btn-warning text-white w-100" type="submit">Change</button>
+                                   <button class="btn btn-warning text-white w-100" type="submit">Change Passowrd</button>
                                </form>
                             </div>
 
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
                

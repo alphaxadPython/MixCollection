@@ -47,26 +47,22 @@
         }
     ?>
 
-    <div class="d-sm-block d-md-none fixed-top position-sticky">
-        <nav class="breadcrumb">
-            <a  href="#menu" style="color: #FE980F;"><i class="fas fa-caret-down"></i> Cartegories</a>   
-        </nav>
-    </div>
+ 
    
    
     <div class="section mt-5">
         <div class="container">
             <div class="row">
-                <?php include "logedSide.php"; ?>
+             
 
-                <div class="col-sm-9">
+                <div class="col-sm-12">
 
                 <?php
                     include "connection.php";
 
                     $id = $_GET['id'];
 
-                    $sql = "SELECT * FROM products where id ='$id'";
+                    $sql = "SELECT * FROM cart where productid ='$id'";
                     $check = mysqli_query($conn, $sql);
 
 
@@ -85,17 +81,16 @@
                                     <small class="text-muted">Product name</small>
                                     <input type="text" name="productName" placeholder="Product Name" value="<?php echo $row['productname']; ?>" disabled/>
                                     <small class="text-muted">Product cost</small>
-                                    <input type="text" name="cost" placeholder="Cost" value="<?php echo $row['cost']; ?>" disabled/>
-                                    <small class="text-muted">available</small>
-                                    <input type="text" name="quantity" placeholder="Quantity"  value="<?php echo $row['available']; ?>" disabled/>
+                                    <input type="text" name="cost" placeholder="Cost" value="<?php echo $row['price']; ?>" disabled/>
                                     <div class="row">
                                         <div class="col-6">
                                             <small class="text-muted">User ratings</small><br>
                                             <i class="fas fa-star text-warning mt-4" ></i><i class="fas fa-star text-warning"></i>  <i class="fas fa-star-half-alt text-warning"></i><i class="fas fa-star-half-alt text-warning"></i><br>
                                         </div>
                                         <div class="col-6">
-                                        <small class="text-muted">Choose Quantity</small>
-                                            <select name="quantity" id="" value="" class="form-control" placeholder="Product quantity">
+                                        <small class="text-muted">Update Quantity</small>
+                                            <select name="quantity" id="" value="<?php echo $row['quantity']; ?>" class="form-control" placeholder="Product quantity">
+                                                <option value="<?php echo $row['quantity']; ?>"><?php echo $row['quantity']; ?></option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -113,7 +108,7 @@
                                              <a href="checkout.php" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
                                         </div>
                                         <div class="col-md-6">
-                                           <button type="submit" name="cart" class="btn w-100"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                           <button type="submit" name="cart" class="btn w-100">Edit Quantity</button>
                                         </div>
                                     </div>
                                 </div>

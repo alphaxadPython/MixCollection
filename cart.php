@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Cart | Mix - Collection</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -20,52 +20,47 @@
 
 
     <section id="cart_items">
-		<div class="container">
-		
-            <nav class="breadcrumb">
-                <a class="breadcrumb-item" href="#">Home</a>
-                <a class="breadcrumb-item" href="#">Cartegories</a>
-                <span class="breadcrumb-item active">Shopping Cart</span>
-            </nav>
-
-			<div class="table-responsive cart_info">
-				<table class="table table-condensed">
-					<thead>
-						<tr class="cart_menu text-center">
-							<td class="image">Item</td>
-							<td class="description"></td>
-							<td class="price">Price</td>
-							<td class="quantity">Quantity</td>
-							<td class="total">Total</td>
-							<td>Manage</td>
+		<div class="container mt-3">
+			<h5 class="text-muted mt-4"><i class="fa fa-cart-plus" aria-hidden="true"></i> My Shopping Cart</h5>
+			
+		<div class="table-responsive cart_info">
+                <table class="table table-striped bg-warniing ">
+                    <thead class=" text-dark">
+					<tr class="cart_menu text-center">
+							<td >Photo</td>
+							<td>Product</td>
+							<td>Price</td>
+							<td>Quantity</td>
+							<td>Total</td>
+							<td>Update</td>
+							<td>Delete</td>
 						</tr>
-					</thead>
-					<tbody>
-						<tr class="text-center">
-							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<p class="text-muted">Colorblock</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-                                <p>6</p>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-                                 <a class="cart_quantity_delete" href="" data-toggle="tooltip" data-placement="top" title="Edit this Item"> <i class="fas fa-edit" ></i></a>
-							    <a class="cart_quantity_delete" href="" data-toggle="tooltip" data-placement="top" title="Delete This Item"><i class="fa fa-trash" aria-hidden="true"></i> </a>
-							</td>
-						</tr>
+                    </thead>
+                    <tbody>            
+                    <?php
+                        include "connection.php";
 
-					</tbody>
-				</table>
-			</div>
+                        $id = $_SESSION['id'];
+
+                        $sql = "SELECT * FROM cart WHERE userid ='$id'";
+                        $check = mysqli_query($conn, $sql);
+
+                        while($row = mysqli_fetch_assoc($check)){
+                        
+                    ?>
+                        <tr> 
+                            <td><img src="<?php echo $row['photo']; ?>" style="width: 100px; height: 100px" alt=""></td>
+                            <td><?php echo $row['productname']; ?></td>
+                            <td><?php echo $row['price']; ?></td>
+                            <td><?php echo $row['quantity']; ?></td>
+                            <td><?php echo $row['total']; ?></td>
+                            <td><a href="cartItem.php?id=<?php echo $row['productid'];?>" ><i class="far fa-edit"></i></a></td>
+                            <td><a href="singleDelete.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash text-danger"></i></a></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+            </div>
 		</div>
 	</section> <!--/#cart_items-->
 
