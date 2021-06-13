@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light position-sticky fixed-top">
-         <a class="navbar-brand" href="index.php"><span style="color: #FE980F">Mix</span> Collection</a>
+         <a class="navbar-brand" href="index.php"> <img src="logo/logo.jpg" style="width: 30px; height: 30px; border-radius: 50%" alt=""> <span style="color: #FE980F">Mix</span> Collection</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

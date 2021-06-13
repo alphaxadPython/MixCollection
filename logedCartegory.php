@@ -17,64 +17,7 @@
 <body>
     
     <?php include "nav1.php"; ?>
-
-    <div class="section">
-        <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselId" data-slide-to="1"></li>
-                <li data-target="#carouselId" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner pl-3" role="listbox">
-
-                <div class="carousel-item active ">
-                    <div class="item active row">
-                        <div class="col-sm-6">
-                            <h1><span>MIX</span>-COLLECTION</h1>
-                            <h2>Cheap Products Available !!</h2>
-                            <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop Now</button>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="upload/product10.jpg" class="girl img-responsive" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                <div class="item row">
-                    <div class="col-sm-6">
-                            <h1><span>MIX</span>-COLLECTION</h1>
-                        <h2>Free Products delivery!!</h2>
-                        <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                        <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop Now</button>
-                    </div>
-                    <div class="col-sm-6">
-                            <img src="upload/product11.jpg" class="girl img-responsive" alt="" />
-                    </div>
-                </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="item row">
-                        <div class="col-sm-6">
-                            <h1><span>MIX</span>-COLLECTION</h1>
-                            <h2>Multiple cartegories!!</h2>
-                            <p>We offer quality, cheap and fast delivered products.. Please shop with us now!! Shop five products get six more!! </p>
-                            <button type="button" class="btn btn-default get" data-toggle="modal" data-target="#modelId">Shop Now</button>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="upload/product8.jpg" class="girl img-responsive" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-            </a>
-            <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-            </a>
-        </div>
-    </div> <br>
+     <br>
 
 
     <div class="d-sm-block d-md-none fixed-top position-sticky">
