@@ -25,6 +25,8 @@
                 <a class="breadcrumb-item" href="admin.php">Home</a>
                 <a class="breadcrumb-item" href="Add.php">Products</a>
                 <span class="breadcrumb-item active">Add Product</span>
+				<button class="btn  mb-2 update " data-toggle="modal" data-target="#modelId">Add New Product</button> 
+
             </nav>
 
 			<div class="table-responsive cart_info">

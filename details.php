@@ -16,9 +16,7 @@
 
 </head>
 <body>
-    
-    
-    <?php
+     <?php
 
 
         include "connection.php";
@@ -45,7 +43,10 @@
             header("location: cart.php");
         }
     ?>
+    
+    
     <?php include "nav1.php" ?>
+   
 
     <div class="d-sm-block d-md-none fixed-top position-sticky">
         <nav class="breadcrumb">
