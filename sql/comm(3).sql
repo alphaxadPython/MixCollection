@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2021 at 07:22 PM
+-- Generation Time: Jun 14, 2021 at 07:17 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.5
 
@@ -32,10 +32,18 @@ CREATE TABLE `cart` (
   `productname` varchar(100) NOT NULL,
   `productid` int(11) NOT NULL,
   `userid` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `total` int(11) NOT NULL,
   `photo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `productname`, `productid`, `userid`, `price`, `quantity`, `total`, `photo`) VALUES
+(1, 'Brazil 2012', 2, 2, 0, 1, 16000, 'upload/braa.png');
 
 -- --------------------------------------------------------
 
@@ -144,7 +152,40 @@ INSERT INTO `products` (`id`, `productname`, `quantity`, `available`, `cost`, `c
 (71, 'Grey Panama', 45, 45, 5000, 'short', 'upload/indexfdgfd.jpg'),
 (72, 'jeans comba', 35, 35, 3400, 'short', 'upload/jean.jpg'),
 (73, 'Hot pots', 45, 45, 15000, 'app', 'upload/pot.jpg'),
-(74, 'Fly pana', 12, 12, 3000, 'app', 'upload/fly.jpg');
+(89, 'Grey Tshirt', 12, 12, 7000, 'shirt', 'upload/grey.png'),
+(90, 'Red Plain', 15, 15, 7000, 'shirt', 'upload/qew.jpg'),
+(91, 'Black Plain', 67, 67, 7500, 'shirt', 'upload/indexhjk.jpg'),
+(92, 'Red Mart Coral', 34, 34, 8000, 'shirt', 'upload/mn.png'),
+(93, 'Purple Plain', 12, 12, 6500, 'shirt', 'upload/puple.jpg'),
+(94, 'Orange Plain', 45, 45, 6500, 'shirt', 'upload/orange.png'),
+(95, 'Black Mint', 15, 15, 4000, 'beauty', 'upload/sp.jpg'),
+(96, 'Nice Spray', 16, 16, 4500, 'beauty', 'upload/sprr.webp'),
+(97, 'Nivea Mill', 14, 14, 7000, 'beauty', 'upload/nv.jpg'),
+(98, 'Axe spray', 19, 19, 5000, 'beauty', 'upload/axe.png'),
+(99, 'Black man', 19, 19, 5500, 'beauty', 'upload/blac.jpg'),
+(100, 'Blue Lady', 12, 12, 5000, 'beauty', 'upload/blu.PNG'),
+(101, 'Baby Lotion', 45, 45, 4500, 'beauty', 'upload/baby.jpg'),
+(103, 'Orange Corn', 15, 15, 4500, 'beauty', 'upload/corn.webp'),
+(104, 'Cola Eva', 14, 14, 4500, 'beauty', 'upload/eva.png'),
+(105, 'Ocean Wash', 12, 12, 5000, 'beauty', 'upload/ocen.webp'),
+(106, 'Not Sprayer', 34, 34, 7000, 'beauty', 'upload/not.png'),
+(107, 'Adidas', 45, 45, 15000, 'beauty', 'upload/adi.png'),
+(108, 'Jeans Max', 67, 67, 15000, 'short', 'upload/tro.jpg'),
+(109, 'Soft Cotton', 34, 34, 5000, 'short', 'upload/unnamed.png'),
+(111, 'Makhe trouser', 34, 34, 15000, 'short', 'upload/mat.png'),
+(112, 'Cardet teach', 34, 34, 12000, 'short', 'upload/tch.png'),
+(113, 'Mens cutz', 12, 12, 15000, 'short', 'upload/demoo.jpg'),
+(114, 'Makhe Pum', 56, 56, 12000, 'short', 'upload/pum.jpg'),
+(115, 'Play Balls', 45, 45, 30000, 'spoti', 'upload/balls.png'),
+(116, 'Samsung pro Max', 34, 34, 250000, 'laptop', 'upload/plum.jpg'),
+(117, 'gamming Machine', 12, 12, 800000, 'laptop', 'upload/Game.jpg'),
+(118, 'Dell Latitude 8', 34, 34, 550000, 'laptop', 'upload/mv.png'),
+(119, 'Samsung Vivo', 34, 34, 600000, 'laptop', 'upload/max.jpg'),
+(120, 'Lenovo Bim', 45, 45, 500000, 'laptop', 'upload/leno.jpg'),
+(121, 'foot Ball', 45, 45, 30000, 'spoti', 'upload/pic.png'),
+(122, 'Basket ball', 15, 15, 40000, 'spoti', 'upload/bac.png'),
+(123, 'Tennis Ball', 45, 45, 35000, 'spoti', 'upload/teb.png'),
+(124, 'Swimming ball', 47, 47, 25000, 'spoti', 'upload/swim.png');
 
 -- --------------------------------------------------------
 
@@ -164,7 +205,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'alpha', 'alpha@gmail.com', '123');
+(1, 'alpha', 'alpha@gmail.com', '123'),
+(2, 'juma', 'juma@gmail.com', '123');
 
 --
 -- Indexes for dumped tables
@@ -202,7 +244,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `checkout`
@@ -214,13 +256,13 @@ ALTER TABLE `checkout`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

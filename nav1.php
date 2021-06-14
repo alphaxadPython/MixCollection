@@ -1,6 +1,6 @@
 <?php  session_start(); ?>
 <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="userloged.php"><img src="logo/logo.jpg" style="width: 30px; height: 30px; border-radius: 50%" alt=""> <span style="color: #FE980F">Mix</span> Collection</a>
+        <a class="navbar-brand" href="userloged.php"><img src="logo/logo.png" style="width: 35px; height: 35px;" alt=""> <span style="color: #FE980F">Mix</span> Collection</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

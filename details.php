@@ -16,15 +16,19 @@
 
 </head>
 <body>
-     <?php
+  
+    
+    
+    <?php include "nav1.php" ?>
+       <?php
 
 
         include "connection.php";
 
-        $id = $_GET['id'];
+        $ids = $_GET['id'];
         $userid = $_SESSION['id'];
 
-        $sql = "SELECT * FROM products where id ='$id'";
+        $sql = "SELECT * FROM products where id ='$ids'";
         $check = mysqli_query($conn, $sql);
         $values = mysqli_fetch_assoc($check);
 
@@ -43,9 +47,6 @@
             header("location: cart.php");
         }
     ?>
-    
-    
-    <?php include "nav1.php" ?>
    
 
     <div class="d-sm-block d-md-none fixed-top position-sticky">

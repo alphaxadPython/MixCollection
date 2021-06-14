@@ -27,7 +27,7 @@
         $id = $_GET['id'];
         $userid = $_SESSION['id'];
 
-        $sql = "SELECT * FROM products where id ='$id'";
+        $sql = "SELECT * FROM cart where id ='$id'";
         $check = mysqli_query($conn, $sql);
         $values = mysqli_fetch_assoc($check);
 
