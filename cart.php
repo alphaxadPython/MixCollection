@@ -97,7 +97,7 @@
 							<li>Total Cost<span>$61</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Clear Cart</a>
-							<a class="btn btn-default check_out" href="loged.php">Proceed Shopping</a>
+							<a class="btn btn-default check_out" href="userloged.php">Proceed Shopping</a>
 					</div>
 				</div>
 			</div>

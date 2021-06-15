@@ -41,7 +41,7 @@
 
             $toatl = $quantity * $cost;
 
-            $sql = "INSERT INTO `cart`(`productname`, `productid`, `userid`,`price`,`quantity`, `total`, `photo`) VALUES ('$proname','$id','$userid','$cost','$quantity','$toatl','$photo')";
+            $sql = "INSERT INTO `cart`(`productname`, `productid`, `userid`,`price`,`quantity`, `total`, `photo`) VALUES ('$proname','$ids','$userid','$cost','$quantity','$toatl','$photo')";
             mysqlI_query($conn, $sql);
 
             header("location: cart.php");

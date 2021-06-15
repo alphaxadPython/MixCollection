@@ -17,7 +17,7 @@
                     <a class="nav-link" href="userloged.php" > <i class="fa fa-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" data-toggle="modal" data-target="#modelId"> <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                    <a class="nav-link" href="profile.php" > <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="cart.php"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-warning text-white">8</span></a>
@@ -34,55 +34,5 @@
 
 
     
-    <!-- Modal -->
-    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">My Profile</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <?php 
-                            include "connection.php";
-
-                            $id = $_SESSION['id'];
-
-                            $sql = "SELECT * FROM users WHERE id ='$id'";
-                            $check = mysqli_query($conn, $sql);
-    
-                            while($row = mysqli_fetch_assoc($check)){
-                        ?>
-                        <div class="col-md-6">
-                            <img src="upload/walk.jpg" style="width: 100%; height: 300px" alt="">
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class=" text-warning"><i class="fa fa-user" aria-hidden="true"></i> Username: </h6><span class="text-muted"><?php echo $row['username']; ?></span>
-                            <h6 class=" text-warning">Email: </h6><span class="text-muted"><?php echo $row['email']; ?></span>
-                            <h6 class="mt-2 text-warning"><i class="fa fa-unlock" aria-hidden="true"></i> Change Password: </h6>
-                            <div class="mt-2 row p-3 login-form">
-                               <form action="" method="post">
-                                   <div class="row ">
-                                    <div class="col-md-12">
-                                            <input type="password" name="password1" placeholder="Old Password" required/>
-                                        </div>
-                                        <div class="col-md-12 ">
-                                            <input type="password" name="password1" placeholder="New password" required/>
-                                        </div>
-                                   </div>
-                                   <button class="btn btn-warning text-white w-100" type="submit">Change Passowrd</button>
-                               </form>
-                            </div>
-
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-    </div>
+ 
    
