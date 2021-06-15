@@ -64,34 +64,13 @@
 		</div>
 	</section> <!--/#cart_items-->
 
-	<section id="do_action">
+	<section id="do_action d-sm-none d-md-block">
 		<div class="container">
 			<div class="heading">
-				<h3>What would you like to do next?</h3>
-				<p>Either Checkout For Payments, Clear the Cart or Proceed Shopping!!</p>
+				<h3><i class="fa fa-question-circle" aria-hidden="true"></i> What would you like to do next?</h3>
 			</div>
 			<div class="row">
-				<div class="col-sm-6">
-					<div class="chose_area">
-							<h5>Payment Means</h5>
-						<ul class="user_option">
-							<li>
-								<input type="checkbox">
-								<label>PayPal <i class="fab fa-cc-paypal" style="color: #003a75; font-size: 20px;"></i></label>
-							</li>
-							<li>
-								<input type="checkbox">
-								<label>Master Card <i class="fab fa-cc-mastercard" style="color: #FE980F; font-size: 20px;"></i></label>
-							</li>
-							<li>
-								<input type="checkbox">
-								<label>Western Union</label>
-							</li>
-						</ul>
-						<a class="btn btn-default update" href="checkout.php">Checkout</a>
-					</div>
-				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-12">
 					<div class="total_area">
 					
 						<ul>
@@ -124,10 +103,27 @@
 						<?php ?>
 
 						</ul>
-							<a class="btn btn-default update" href="clearCart.php">Clear Cart</a>
-							<a class="btn btn-default check_out" href="userloged.php">Proceed Shopping</a>
+						<div class="container text-center">
+							<div class="row">
+								<div class="col-4">
+									<a class="btn btn-default update" href="clearCart.php"><i class="fas fa-trash "></i> Clear Cart</a>
+								
+								</div>
+								<div class="col-4">
+									<a class="btn btn-default check_out" href="userloged.php"><i class="fa fa-cart-plus" aria-hidden="true"></i> Shop Moree</a>
+								
+								</div>
+								<div class="col-4">
+									<a class="btn btn-default check_out" href="checkout.php"><i class="fa fa-star" aria-hidden="true"></i> Checkout</a>
+								
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				
+				
 			</div>
 		</div>
 	</section><!--/#do_action-->
