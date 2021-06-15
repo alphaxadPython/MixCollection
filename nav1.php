@@ -20,7 +20,22 @@
                     <a class="nav-link" href="profile.php" > <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cart.php"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-warning text-white">8</span></a>
+                    <a class="nav-link" href="cart.php"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-warning text-white">
+                    <?php 
+						include "connection.php";
+						$id = $_SESSION['id'];
+
+						$sql = "SELECT count(userid) AS 'count' FROM cart WHERE userid ='$id'";
+						$result = mysqli_query($conn, $sql);
+						$check = mysqli_fetch_assoc($result);
+
+
+						$count = $check['count'];
+
+                        echo $count;
+						?>
+						
+                    </span></a>
                 </li><li class="nav-item">
                     <a class="nav-link" href="checkout.php"> <i class="fa fa-star" aria-hidden="true"></i> Checkout</a>
                 </li>

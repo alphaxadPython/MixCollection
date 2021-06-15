@@ -73,6 +73,7 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="chose_area">
+							<h5>Payment Means</h5>
 						<ul class="user_option">
 							<li>
 								<input type="checkbox">
@@ -92,11 +93,38 @@
 				</div>
 				<div class="col-sm-6">
 					<div class="total_area">
+					
 						<ul>
-							<li>Item Quantity <span>80</span></li>
-							<li>Total Cost<span>$61</span></li>
+						<?php 
+						include "connection.php";
+						$id = $_SESSION['id'];
+
+						$sql = "SELECT sum(quantity) AS 'count' FROM cart WHERE userid ='$id'";
+						$result = mysqli_query($conn, $sql);
+						$check = mysqli_fetch_assoc($result);
+
+
+						$count = $check['count'];
+						?>
+							<li>Item Quantity <span><?php echo $count; ?></span></li>
+						<?php ?>
+
+						<?php 
+						include "connection.php";
+						$id = $_SESSION['id'];
+
+						$sql = "SELECT sum(total) AS 'total' FROM cart WHERE userid ='$id'";
+						$result = mysqli_query($conn, $sql);
+						$check = mysqli_fetch_assoc($result);
+
+
+						$total = $check['total'];
+						?>
+							<li>Total Cost<span><?php echo $total; ?> TSH/=</span></li>
+						<?php ?>
+
 						</ul>
-							<a class="btn btn-default update" href="">Clear Cart</a>
+							<a class="btn btn-default update" href="clearCart.php">Clear Cart</a>
 							<a class="btn btn-default check_out" href="userloged.php">Proceed Shopping</a>
 					</div>
 				</div>

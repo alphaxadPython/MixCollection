@@ -24,7 +24,16 @@
         if(isset($_POST['edit'])) {
             $quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
 
-            $sql = "UPDATE cart SET quantity ='$quantity' WHERE id ='$id'";
+            $qry = "SELECT price FROM cart WHERE id ='$id'";
+            $check = mysqli_query($conn, $qry);
+
+            $row = mysqli_fetch_assoc($check);
+
+            $price = $row['price'];
+            
+            $total = $quantity * $price;
+
+            $sql = "UPDATE cart SET quantity ='$quantity', total ='$total' WHERE id ='$id'";
             mysqli_query($conn, $sql);
 
             header('location: cart.php');

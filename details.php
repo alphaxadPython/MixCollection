@@ -44,12 +44,13 @@
             $check = mysqli_query($conn, $qry);
 
             if(mysqli_num_rows($check) == 1){
-                $toatl = $quantity * $cost;
+                $total = $quantity * $cost;
 
-                $sql = "UPDATE `cart` SET `quantity`='$quantity',`total`='$total' WHERE userid ='$userid'";
+                $sql = "UPDATE `cart` SET `quantity`='$quantity',`total`='$total' WHERE userid ='$userid' AND productid ='$ids'";
                 mysqlI_query($conn, $sql);
-    
+
                 header("location: cart.php");
+
             }else{
                 $toatl = $quantity * $cost;
 
