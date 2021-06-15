@@ -54,7 +54,7 @@
                             <td><?php echo $row['price']; ?></td>
                             <td><?php echo $row['quantity']; ?></td>
                             <td><?php echo $row['total']; ?></td>
-                            <td><a href="cartItem.php?id=<?php echo $row['productid'];?>" ><i class="far fa-edit"></i></a></td>
+                            <td><a href="cartItem.php?id=<?php echo $row['id'];?>" ><i class="far fa-edit"></i></a></td>
                             <td><a href="singleDelete.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash text-danger"></i></a></td>
                         </tr>
                     <?php } ?>

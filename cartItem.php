@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart-Product | Mix Collection</title>
+    <title>Cart-Item | Mix Collection</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,48 +12,32 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/all.css">
 
-
 </head>
 <body>
     
-    <?php include "nav1.php" ?>
-    
-    <?php
+   <?php include "nav1.php" ?>
 
-
+   <?php 
         include "connection.php";
-
         $id = $_GET['id'];
-        $userid = $_SESSION['id'];
 
-        $sql = "SELECT * FROM cart where id ='$id'";
-        $check = mysqli_query($conn, $sql);
-        $values = mysqli_fetch_assoc($check);
-
-        $photo = $values['photo'];
-        $proname = $values['productname'];
-        $cost = $values['cost'];
-                            
-        if(isset($_POST['cart'])){
+        if(isset($_POST['edit'])) {
             $quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
 
-            $toatl = $quantity * $cost;
+            $sql = "UPDATE cart SET quantity ='$quantity' WHERE id ='$id'";
+            mysqli_query($conn, $sql);
 
-            $sql = "INSERT INTO `cart`(`productname`, `productid`, `userid`,`price`,`quantity`, `total`, `photo`) VALUES ('$proname','$id','$userid','$cost','$quantity','$toatl','$photo')";
-            mysqlI_query($conn, $sql);
-
-            header("location: cart.php");
+            header('location: cart.php');
         }
-    ?>
 
- 
-   
-   
-    <div class="section mt-5">
+
+
+   ?>
+
+    <div class="section mt-3">
         <div class="container">
+            <h4 class="text-muted"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Edit Quantity</h4>
             <div class="row">
-             
-
                 <div class="col-sm-12">
 
                 <?php
@@ -62,14 +45,12 @@
 
                     $id = $_GET['id'];
 
-                    $sql = "SELECT * FROM cart where productid ='$id'";
+                    $sql = "SELECT * FROM cart where id ='$id'";
                     $check = mysqli_query($conn, $sql);
-
-
                     while($row = mysqli_fetch_assoc($check)){
-                 ?>
-				
-                     <div class="card">
+                    ?>
+                
+                        <div class="card">
                         <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
@@ -104,31 +85,32 @@
                                             </select><br>
                                         </div>
                                     <div class="row">
-                                        <div class="col-md-6 mt-4">
-                                             <a href="checkout.php" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
+                                        <div class="col-6 mt-4">
+                                                <a href="checkout.php" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
                                         </div>
-                                        <div class="col-md-6">
-                                           <button type="submit" name="cart" class="btn w-100">Edit Quantity</button>
+                                        <div class="col-6">
+                                            <button type="submit" name="edit" class="btn w-100">Edit Quantity</button>
                                         </div>
                                     </div>
                                 </div>
                                 </form>
                             </div>
-                       </div>
                         </div>
-                     </div>
- 
+                        </div>
+                        </div>
+
 
                     <?php } ?>
-				
-				</div>
+                
+                </div>
             </div>
         </div>
     </div>
 
+	
 
 
-    <script src="js/bootstrap.js"></script> 
+    <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/proper.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -139,3 +121,10 @@
     
 </body>
 </html>
+
+
+
+
+
+
+

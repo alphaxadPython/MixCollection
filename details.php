@@ -20,6 +20,7 @@
     
     
     <?php include "nav1.php" ?>
+
        <?php
 
 
@@ -39,12 +40,27 @@
         if(isset($_POST['cart'])){
             $quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
 
-            $toatl = $quantity * $cost;
+            $qry = "SELECT * FROM cart WHERE userid ='$userid' AND  productname='$prname'";
+            $check = mysqli_query($conn, $sql);
 
-            $sql = "INSERT INTO `cart`(`productname`, `productid`, `userid`,`price`,`quantity`, `total`, `photo`) VALUES ('$proname','$ids','$userid','$cost','$quantity','$toatl','$photo')";
-            mysqlI_query($conn, $sql);
+            if(mysqli_num_rows($check) >= 1){
+                $toatl = $quantity * $cost;
 
-            header("location: cart.php");
+                $sql = "UPDATE `cart` SET `quantity`='$quantity',`total`='$total' WHERE userid ='$userid' AND id='$id'";
+                mysqlI_query($conn, $sql);
+    
+                header("location: cart.php");
+            }else{
+                $toatl = $quantity * $cost;
+
+                $sql = "INSERT INTO `cart`(`productname`, `productid`, `userid`,`price`,`quantity`, `total`, `photo`) VALUES ('$proname','$ids','$userid','$cost','$quantity','$toatl','$photo')";
+                mysqlI_query($conn, $sql);
+    
+                header("location: cart.php");
+                
+            }
+
+            
         }
     ?>
    
