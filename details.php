@@ -43,10 +43,10 @@
             $qry = "SELECT * FROM cart WHERE userid ='$userid' AND  productname='$proname'";
             $check = mysqli_query($conn, $qry);
 
-            if(mysqli_num_rows($check) >= 1){
+            if(mysqli_num_rows($check) == 1){
                 $toatl = $quantity * $cost;
 
-                $sql = "UPDATE `cart` SET `quantity`='$quantity',`total`='$total' WHERE userid ='$userid' AND id='$id'";
+                $sql = "UPDATE `cart` SET `quantity`='$quantity',`total`='$total' WHERE userid ='$userid'";
                 mysqlI_query($conn, $sql);
     
                 header("location: cart.php");
