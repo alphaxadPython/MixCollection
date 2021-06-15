@@ -40,8 +40,8 @@
         if(isset($_POST['cart'])){
             $quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
 
-            $qry = "SELECT * FROM cart WHERE userid ='$userid' AND  productname='$prname'";
-            $check = mysqli_query($conn, $sql);
+            $qry = "SELECT * FROM cart WHERE userid ='$userid' AND  productname='$proname'";
+            $check = mysqli_query($conn, $qry);
 
             if(mysqli_num_rows($check) >= 1){
                 $toatl = $quantity * $cost;
