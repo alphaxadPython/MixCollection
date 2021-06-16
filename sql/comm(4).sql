@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 07:17 PM
+-- Generation Time: Jun 16, 2021 at 04:32 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.5
 
@@ -43,7 +43,13 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `productname`, `productid`, `userid`, `price`, `quantity`, `total`, `photo`) VALUES
-(1, 'Brazil 2012', 2, 2, 0, 1, 16000, 'upload/braa.png');
+(1, 'Samsung edge', 29, 2, 250000, 1, 250000, 'upload/sumsng.png'),
+(2, 'Aresenal 2018', 64, 2, 15000, 1, 15000, 'upload/asen.png'),
+(3, 'Etihad Black', 59, 2, 18000, 1, 18000, 'upload/eti.png'),
+(4, 'Note pad', 51, 2, 3000, 1, 3000, 'upload/note.png'),
+(22, 'Tennis Ball', 123, 1, 35000, 8, 0, 'upload/teb.png'),
+(23, 'Ocean Wash', 105, 1, 5000, 8, 0, 'upload/ocen.webp'),
+(24, 'Samsung edge', 29, 1, 250000, 8, 0, 'upload/sumsng.png');
 
 -- --------------------------------------------------------
 
@@ -244,7 +250,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `checkout`

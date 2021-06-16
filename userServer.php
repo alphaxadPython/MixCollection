@@ -1,7 +1,5 @@
 <?php
 
-    session_start();
-
     include "connection.php";
     // register the user signed ins
 

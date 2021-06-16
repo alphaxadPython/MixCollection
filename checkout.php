@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout | Mix-Collection</title>
+    <link rel="icon" href="logo/logo.ico" type="image/icon type" > 
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -88,15 +90,15 @@
                                     <ul class="user_option">
                                     <li>
                                         <input type="radio" name="payy" id="">
-                                        <label>VISA <i class="fas fa-paypal"></i></label>
+                                        <label>VISA <i class="fab fa-cc-visa text-danger"></i></label>
                                     </li>
                                     <li>
                                         <input type="radio" name="payy" id="">
-                                        <label>Google Pay <i class="fab fa-google-pay text-danger"></i></label>
+                                        <label>Google Pay <i class="fab fa-google-pay text-danger" style="font-size: 25px"></i></label>
                                     </li>
                                     <li>
                                         <input type="radio" name="payy" id="">
-                                        <label>Western Union</label>
+                                        <label>Apple Pay <i class="fab fa-apple-pay text-success" style="font-size: 25px"></i></label>
                                     </li>
                                 </ul>
                             </div>
