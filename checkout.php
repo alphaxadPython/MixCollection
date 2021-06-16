@@ -72,15 +72,15 @@
                                     <ul class="user_option">
                                     <li>
                                         <input type="radio" name="payy" id="">
-                                        <label>PayPal <i class="fas fa-paypal"></i></label>
+                                        <label>PayPal <i class="fab fa-paypal text-primary"></i> </label>
                                     </li>
                                     <li>
                                         <input type="radio" name="payy" id="">
-                                        <label>Master Card</label>
+                                        <label>Master Card <i class="fab fa-cc-mastercard text-warning"></i></label>
                                     </li>
                                     <li>
                                         <input type="radio" name="payy" id="">
-                                        <label>E-Wallet</label>
+                                        <label> E-Wallet <i class="fab fa-google-wallet text-primary"></i></label>
                                     </li>
                                 </ul>
                             </div>
@@ -92,7 +92,7 @@
                                     </li>
                                     <li>
                                         <input type="radio" name="payy" id="">
-                                        <label>Google Pay</label>
+                                        <label>Google Pay <i class="fab fa-google-pay text-danger"></i></label>
                                     </li>
                                     <li>
                                         <input type="radio" name="payy" id="">

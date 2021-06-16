@@ -19,7 +19,7 @@
                 <a class="nav-link" href="Add.php"> <i class="fa fa-star-half" aria-hidden="true"></i> Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=""> <i class="fa fa-cart-plus" aria-hidden="true"></i> Carts</a>
+                <a class="nav-link" href="AdminCarts.php"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Carts</a>
             </li><li class="nav-item">
                 <a class="nav-link" href="checkout.php"> <i class="fa fa-star" aria-hidden="true"></i> Checkouts</a>
             </li>

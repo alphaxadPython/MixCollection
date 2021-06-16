@@ -22,11 +22,7 @@
 		<div class="container">
 		
             <nav class="breadcrumb">
-                <a class="breadcrumb-item" href="admin.php">Home</a>
-                <a class="breadcrumb-item" href="Add.php">Products</a>
-                <span class="breadcrumb-item active">Add Product</span>
-				<button class="btn  mb-2 update " data-toggle="modal" data-target="#modelId">Add New Product</button> 
-
+                <a class="breadcrumb-item" href="" style="text-decoration: none;" data-toggle="modal" data-target="#modelId"> <i class="fas fa-cart-plus"></i> Add New Product</a>
             </nav>
 
 			<div class="table-responsive cart_info">
@@ -81,7 +77,7 @@
 	</section> <!--/#cart_items-->
 
     <section class="container text-center">
-        <button class="btn  mb-2 update" data-toggle="modal" data-target="#modelId">Add New Product</button> 
+        <button class="btn  mb-2 update" data-toggle="modal" data-target="#modelId"><i class="fas fa-cart-plus"></i> Add New Product</button> 
     </section>
 
 
@@ -90,7 +86,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Add New Product</h5>
+				<h5 class="modal-title text-muted"><i class="fas fa-cart-plus"></i> Add New Product</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>

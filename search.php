@@ -18,7 +18,7 @@
     
     <?php include "nav1.php" ?>
     <br><br>
-    <div class="container">
+    <div class="container ">
     <h2 class="title text-center">Search Results</h2>
 
         <div class="row">
