@@ -7,10 +7,20 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
                
-        <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search...">
-                <button class="btn btn-outline-warning my-2 my-sm-0" style="color: #FE980F;" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <form class="form-inline my-2 my-lg-0" action="" method="POST">
+                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search...">
+                <button class="btn btn-outline-warning my-2 my-sm-0" name="sech" style="color: #FE980F;" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+
             </form>
+            <?php 
+                    include "connection.php";
+
+                    if(isset($_POST['sech'])){
+                        $_SESSION['search'] = mysqli_real_escape_string($conn, $_POST['search']);
+                        header('location: search.php');
+                    }
+
+            ?>
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
               
                 <li class="nav-item active">

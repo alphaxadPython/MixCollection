@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Mix Collection</title>
+    <title>Products Edit | Mix Collection</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -94,7 +94,7 @@
 								<small class="text-muted">available</small>
 								<input type="number" name="quantity" placeholder="Quantity"  value="<?php echo $row['available']; ?>"/>
 								<small class="text-muted">Update Photo</small>
-								<input type="file" name="file" placeholder="Photo" class="form-control" />
+								<input type="file" name="file" placeholder="Photo" class="form-control" required/>
 								<small class="text-muted">Product cartegory</small>
 								<select name="cartegory" id="" value="" class="form-control" placeholder="Product cartegory">
 									<option value="<?php echo $row['cartegory']; ?>"><?php echo $row['cartegory']; ?></option>

@@ -76,133 +76,20 @@
             </a>
         </div>
     </div> <br>
-    
+
+
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="left-sidebar">
-                        <h2>Categories</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                            <b>Sportings</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="sportswear" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Jersey </a></li>
-                                            <li><a href="#">Balls </a></li>
-                                            <li><a href="#">Sport shoes </a></li>
-                                            <li><a href="#">Sport Facilities</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#electronics">
-                                            <b>Electronics</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="electronics" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Phones & Tablets </a></li>
-                                            <li><a href="#">Laptops & Tablets </a></li>
-                                            <li><a href="#">TV's & Accessories </a></li>
-                                            <li><a href="#">Music Instruments</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                            <b>Mens Clothing</b>
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="mens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Shirts & T-shirts</a></li>
-                                            <li><a href="#">Trouser & Shorts</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                            <b>Women Clothing</b>
-                                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="womens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Skirts & Gouwns</a></li>
-                                            <li><a href="#">Jeans & trouser</a></li>
-                                            <li><a href="#">Body Tights</a></li>
-                                            <li><a href="#">Pants & socks</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Bags & Watches</b></a></h4>
-                                </div>
-                            </div>
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Home Appliance</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Healthy & Beauty</b></a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#"><b>Stationaries</b></a></h4>
-                                </div>
-                            </div>
-                        </div><!--/category-products-->
-                    </div>
-                </div>
+              <?php include "sideMenue.php" ?>
 
                 <div class="col-sm-9">
+
                     <div class="features_items"><!--features_items-->
-                        <h2 class="title text-center">Available Products</h2>
+                        <h2 class="title text-center">Registered Products</h2>
                     
+                       
+
                         <div class="row">
                            <?php 
 
@@ -219,10 +106,10 @@
                                     <div class="product-image-wrapper card shadow">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <img src="<?php echo $row['photo']; ?>" alt="" />
+                                            <img src="<?php echo $row['photo']; ?>" style="width: 100%; height: 160px" alt="" />
                                                 <p style="color: #FE980F"><?php echo $row['cost']; ?>TSH/=</p>
                                                 <p><?php echo $row['productname']; ?></p>
-                                                <a href="editProduct.php?id=<?php echo $row['id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="editProduct.php?id=<?php echo $row['id']; ?>" class="btn btn-default add-to-cart"><i class="far fa-edit"></i> Edit Product</a>
                                             </div>
                                             
                                     </div>
@@ -231,11 +118,9 @@
                             </div>
                             <?php } ?>
                         </div>
-						.
+						
 				    </div><!--features_items-->
-                    
 
-               
                     <nav aria-label="pages navigation">
                       <ul class="pagi justify-content-center">
                         <li class="pages-item disabled">
@@ -244,7 +129,7 @@
                             <span class="sr-only">Previous</span>
                           </a>
                         </li>
-                        <li class="pages-item active"><a class="pages-link" href="#">1</a></li>
+                        <li class="pages-item active"><a class="pages-link" href="index.php">1</a></li>
                         <li class="pages-item"><a class="pages-link" href="#">2</a></li>
                         <li class="pages-item">
                           <a class="pages-link" href="#" aria-label="Next">
@@ -254,6 +139,8 @@
                         </li>
                       </ul>
                     </nav>
+                    
+					
                 </div>
             </div>
         </div>
