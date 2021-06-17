@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout | Mix-Collection</title>
     <link rel="icon" href="logo/logo.ico" type="image/icon type" > 
-
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -126,8 +125,9 @@
 		</div>
 	</section><!--/#do_action-->
 
-    <div class="section mt-5">
+    <div class="section">
         <div class="container">
+                <h4 class="text-muted"><i class="fa fa-cart-plus" aria-hidden="true"></i> Item Shopped</h4>
             <div class="row">
 
                 <div class="col-sm-12">
@@ -179,24 +179,14 @@
                                                 <option value="10">10</option>
                                             </select><br>
                                         </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mt-4">
-                                             <a href="checkout1.php?id=<?php echo $row['id'];?>" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
-                                        </div>
-                                        <div class="col-md-6">
-                                           <button type="submit" name="cart" class="btn w-100"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 </form>
                             </div>
                        </div>
                         </div>
                      </div>
- 
-
                     <?php } ?>
-				
 				</div>
             </div>
         </div>

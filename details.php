@@ -20,10 +20,7 @@
     
     
     <?php include "nav1.php" ?>
-
        <?php
-
-
         include "connection.php";
 
         $ids = $_GET['id'];
@@ -62,6 +59,9 @@
             }
 
             
+        }else if(isset($_POST['check'])){
+            $_SESSION['quantity'] = mysqli_real_escape_string($conn, $_POST['quantity']);
+            header('location: checkout1.php');
         }
     ?>
    
@@ -128,8 +128,9 @@
                                             </select><br>
                                         </div>
                                     <div class="row">
-                                        <div class="col-md-6 mt-4">
-                                             <a href="checkout1.php?id=<?php echo $row['id'];?>" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
+                                        <div class="col-md-6">
+                                             <!-- <a href="checkout1.php?id=<?php echo $row['id'];?>" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a> -->
+                                             <button type="submit" name="check" class="btn w-100"><i class="fas fa-hand-holding-usd"></i> Checkout</button>
                                         </div>
                                         <div class="col-md-6">
                                            <button type="submit" name="cart" class="btn w-100"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -144,7 +145,7 @@
  
 
                     <?php } ?>
-				
+			
 				</div>
             </div>
         </div>
