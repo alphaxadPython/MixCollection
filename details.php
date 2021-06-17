@@ -129,7 +129,7 @@
                                         </div>
                                     <div class="row">
                                         <div class="col-md-6 mt-4">
-                                             <a href="checkout.php" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
+                                             <a href="checkout1.php?id=<?php echo $row['id'];?>" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
                                         </div>
                                         <div class="col-md-6">
                                            <button type="submit" name="cart" class="btn w-100"><i class="fa fa-shopping-cart"></i>Add to cart</button>

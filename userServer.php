@@ -20,10 +20,18 @@
             $sql = "INSERT INTO `users`(`username`, `email`, `password`) VALUES ('$username','$email','$password1')";
             mysqli_query($conn, $sql);
 
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['id'] = $row['id'];
- 
-            header('location: userloged.php');
+            echo ' 
+            <div class="container text-center">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    Signup Successfully!! In Please login!!!
+                </div>
+            </div>
+        ';
+            
 
            }else{
                 

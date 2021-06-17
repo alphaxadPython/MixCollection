@@ -97,7 +97,7 @@
                                         </div>
                                     <div class="row">
                                         <div class="col-6 mt-4">
-                                                <a href="checkout.php" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
+                                                <a href="checkout1.php" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
                                         </div>
                                         <div class="col-6">
                                             <button type="submit" name="edit" class="btn w-100">Edit Quantity</button>

@@ -20,6 +20,9 @@
 					<button type="submit" name="login" class="btn btn-default">Login</button>
 				</form>
 				</div>
+				<div class="modal-footer d-sm-block d-md-none">
+					<span>Have No Account ? <a href="" data-dismiss="#modelId"  data-toggle="modal" data-target="#modelId1">Signup Here!</a></span>
+				</div>
 				
 			</div>
 		</div>
