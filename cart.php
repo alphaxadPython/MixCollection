@@ -21,12 +21,12 @@
     <?php include "nav1.php" ?>
 
 
-    <section id="cart_items">
-		<div class="container mt-3">
+    <section id="cart_items" class="d-none d-md-block d-sm-none">
+		<div class="container">
 			<h5 class="text-muted mt-4"><i class="fa fa-cart-plus" aria-hidden="true"></i> My Shopping Cart</h5>
 			
-		<div class="table-responsive cart_info">
-                <table class="table table-striped bg-warniing ">
+			<div class="table-responsive cart_info ">
+                <table class="table table-striped bg-warniing">
                     <thead class=" text-dark">
 					<tr class="cart_menu text-center">
 							<td >Photo</td>
@@ -50,7 +50,7 @@
                         while($row = mysqli_fetch_assoc($check)){
                         
                     ?>
-                        <tr> 
+                        <tr class=""> 
                             <td><img src="<?php echo $row['photo']; ?>" style="width: 100px; height: 100px" alt=""></td>
                             <td><?php echo $row['productname']; ?></td>
                             <td><?php echo $row['price']; ?></td>
@@ -62,9 +62,52 @@
                     <?php } ?>
                     </tbody>
                 </table>
+			
             </div>
 		</div>
 	</section> <!--/#cart_items-->
+	
+	
+	<div class="container d-md-none">
+		<h5 class="text-muted mt-4"><i class="fa fa-cart-plus" aria-hidden="true"></i> My Shopping Cart</h5>
+
+		<?php
+			include "connection.php";
+
+			$id = $_SESSION['id'];
+
+			$sql = "SELECT * FROM cart WHERE userid ='$id'";
+			$check = mysqli_query($conn, $sql);
+
+			while($row = mysqli_fetch_assoc($check)){
+			
+		?>
+		<div class="card mb-3">
+				<img src="<?php echo $row['photo']; ?>" width="100%" height="250px" alt="">
+			<div class="card-body">
+				<div class="row">
+						<div class="col-sm-12">
+							<p>Product Name:  <span class="text-muted"><?php echo $row['productname']; ?></span></p>
+							<p>Total Quantity:  <span class="text-muted"><?php echo $row['quantity']; ?></span></p>
+							<h6>Total Price:  <span class="text-muted"><?php echo $row['total']; ?></span></h6>
+
+						</div>	
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-6">
+								<a href="cartItem.php?id=<?php echo $row['id'];?>" ><i class="far fa-edit"></i> Edit</a>
+								</div>
+								<div class="col-6">
+								<a href="singleDelete.php?id=<?php echo $row['id']; ?>" class="text-danger"><i class="fas fa-trash text-danger"></i> Remove</a>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+
+	</div>
 
 	<section id="do_action d-sm-none d-md-block">
 		<div class="container">
@@ -107,16 +150,16 @@
 						</ul>
 						<div class="container text-center">
 							<div class="row">
-								<div class="col-4">
-									<a class="btn btn-default update" href="clearCart.php"><i class="fas fa-trash "></i> Clear Cart</a>
+								<div class="col-md-4 col-sm-12">
+									<a class="btn btn-default check_out w-75" href="clearCart.php"><i class="fas fa-trash "></i> Clear Cart</a>
 								
 								</div>
-								<div class="col-4">
-									<a class="btn btn-default check_out" href="userloged.php"><i class="fa fa-cart-plus" aria-hidden="true"></i> Shop Moree</a>
+								<div class="col-md-4 col-sm-12">
+									<a class="btn btn-default check_out w-75" href="userloged.php"><i class="fa fa-cart-plus" aria-hidden="true"></i> Shop Moree</a>
 								
 								</div>
-								<div class="col-4">
-									<a class="btn btn-default check_out" href="checkout.php"><i class="fa fa-star" aria-hidden="true"></i> Checkout</a>
+								<div class="col-md-4 col-sm-12">
+									<a class="btn btn-default check_out w-75" href="checkout.php"><i class="fa fa-star" aria-hidden="true"></i> Checkout</a>
 								
 								</div>
 							</div>

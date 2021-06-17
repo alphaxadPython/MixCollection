@@ -61,6 +61,8 @@
             
         }else if(isset($_POST['check'])){
             $_SESSION['quantity'] = mysqli_real_escape_string($conn, $_POST['quantity']);
+            $_SESSION['idp'] = $_GET['id'];
+            $_SESSION['cost'] = $cost;
             header('location: checkout1.php');
         }
     ?>

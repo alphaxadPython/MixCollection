@@ -22,6 +22,7 @@
    <?php 
         include "connection.php";
         $id = $_GET['id'];
+        $idp = $price ="";
 
         if(isset($_POST['edit'])) {
             $quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
@@ -32,6 +33,8 @@
             $row = mysqli_fetch_assoc($check);
 
             $price = $row['price'];
+
+            $idp = $row['productid'];
             
             $total = $quantity * $price;
 
@@ -39,9 +42,12 @@
             mysqli_query($conn, $sql);
 
             header('location: cart.php');
+        }else if(isset($_POST['check'])){
+            $_SESSION['quantity'] = mysqli_real_escape_string($conn, $_POST['quantity']);
+            $_SESSION['idp'] = $idp;
+            $_SESSION['cost'] = $price;
+            header('location: checkout1.php');
         }
-
-
 
    ?>
 
@@ -96,8 +102,9 @@
                                             </select><br>
                                         </div>
                                     <div class="row">
-                                        <div class="col-6 mt-4">
-                                                <a href="checkout1.php" class="btn w-100 btn-default add-to-cart"><i class="fas fa-hand-holding-usd"></i> Buy Now</a>
+                                        <div class="col-6">
+                                               <button type="submit" name="check" class="btn w-100"><i class="fas fa-hand-holding-usd"></i> Buy Now</button>
+
                                         </div>
                                         <div class="col-6">
                                             <button type="submit" name="edit" class="btn w-100">Edit Quantity</button>

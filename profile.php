@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile | Mix Collection</title>
     <link rel="icon" href="logo/logo.ico" type="image/icon type" > 
-
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -43,11 +42,11 @@
                             
                             <div class="row">
                                 
-                                <div class="col-6">
+                                <div class="col-md-6 col-sm-12">
                                 <h6 class=" text-warning">Username: </h6><span class="text-muted"><?php echo $row['username']; ?></span>
                                     
                                 </div>
-                                <div class="col-6">
+                                <div class="col-md-6 col-sm-12">
                                 <h6 class=" text-warning">Email: </h6><span class="text-muted"><?php echo $row['email']; ?></span>
                                     
                                 </div>

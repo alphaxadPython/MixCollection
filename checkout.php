@@ -126,7 +126,7 @@
 		</div>
 	</section><!--/#do_action-->
 
-    <section id="cart_items">
+    <section id="cart_items" class="d-none d-md-block d-sm-none">
 		<div class="container">
 			<h5 class="text-muted"><i class="fa fa-cart-plus" aria-hidden="true"></i> My Cart List</h5>
 		<div class="table-responsive cart_info">
@@ -169,6 +169,47 @@
             </div>
 		</div>
 	</section> <!--/#cart_items-->
+
+    <div class="container d-md-none">
+		<h5 class="text-muted mt-4"><i class="fa fa-cart-plus" aria-hidden="true"></i> My Shopping Cart</h5>
+
+		<?php
+			include "connection.php";
+
+			$id = $_SESSION['id'];
+
+			$sql = "SELECT * FROM cart WHERE userid ='$id'";
+			$check = mysqli_query($conn, $sql);
+
+			while($row = mysqli_fetch_assoc($check)){
+			
+		?>
+		<div class="card mb-3">
+				<img src="<?php echo $row['photo']; ?>" width="100%" height="250px" alt="">
+			<div class="card-body">
+				<div class="row">
+						<div class="col-sm-12">
+							<p>Product Name:  <span class="text-muted"><?php echo $row['productname']; ?></span></p>
+							<p>Total Quantity:  <span class="text-muted"><?php echo $row['quantity']; ?></span></p>
+							<h6>Total Price:  <span class="text-muted"><?php echo $row['total']; ?></span></h6>
+
+						</div>	
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-6">
+								<a href="cartItem.php?id=<?php echo $row['id'];?>" ><i class="far fa-edit"></i> Edit</a>
+								</div>
+								<div class="col-6">
+								<a href="singleDelete.php?id=<?php echo $row['id']; ?>" class="text-danger"><i class="fas fa-trash text-danger"></i> Remove</a>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+
+	</div>
 
 
     <script src="js/bootstrap.js"></script>

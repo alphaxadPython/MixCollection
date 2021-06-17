@@ -32,34 +32,9 @@
 				<div class="col-sm-6">
 					<div class="total_area">
                     <ul>
-						<?php 
-						include "connection.php";
-						$id = $_SESSION['id'];
+							<li>Item Quantity <span><?php echo $_SESSION['quantity']; ?></span></li>
 
-						$sql = "SELECT sum(quantity) AS 'count' FROM cart WHERE userid ='$id'";
-						$result = mysqli_query($conn, $sql);
-						$check = mysqli_fetch_assoc($result);
-
-
-						$count = $check['count'];
-						?>
-							<li>Item Quantity <span><?php echo $count; ?></span></li>
-						<?php ?>
-
-						<?php 
-						include "connection.php";
-						$id = $_SESSION['id'];
-
-						$sql = "SELECT sum(total) AS 'total' FROM cart WHERE userid ='$id'";
-						$result = mysqli_query($conn, $sql);
-						$check = mysqli_fetch_assoc($result);
-
-
-						$total = $check['total'];
-						?>
-							<li>Total Cost<span><?php echo $total; ?> TSH/=</span></li>
-						<?php ?>
-
+							<li>Total Cost<span><?php echo $_SESSION['quantity'] * $_SESSION['cost']; ?> TSH/=</span></li>
 						</ul>
 
 						
@@ -135,7 +110,7 @@
                 <?php
                     include "connection.php";
 
-                    $id = $_GET['id'];
+                    $id = $_SESSION['idp'];
 
                     $sql = "SELECT * FROM products where id ='$id'";
                     $check = mysqli_query($conn, $sql);
@@ -166,18 +141,8 @@
                                         </div>
                                         <div class="col-6">
                                         <small class="text-muted">Choose Quantity</small>
-                                            <select name="quantity" id="" value="" class="form-control" placeholder="Product quantity">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select><br>
+                                        <input type="text" name="quantity" placeholder="Quantity"  value="<?php echo $_SESSION['quantity'] ?>" disabled/>
+                                           
                                         </div>
                                     
                                 </div>
@@ -192,7 +157,6 @@
         </div>
     </div>
 
-  
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
