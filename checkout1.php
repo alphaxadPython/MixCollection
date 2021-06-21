@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/all.css">
-
-
 </head>
 <body>
     
