@@ -79,7 +79,7 @@
             $_SESSION['username'] = $row['username'];
             $_SESSION['id'] = $row['id'];
 
-            header("location: userloged.php");
+            exit(header("Location: userloged.php"));
         }else{
             echo ' 
             <div class="container text-center">
